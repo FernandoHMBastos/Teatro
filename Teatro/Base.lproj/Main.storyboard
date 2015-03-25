@@ -40,7 +40,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="433" width="137" height="30"/>
+                                    <rect key="frame" x="132" y="416" width="137" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="mailMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="h1p-zf-r2W"/>
