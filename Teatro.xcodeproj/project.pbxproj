@@ -89,6 +89,8 @@
 			children = (
 				85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */,
 				85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */,
+				DAA2FA8C1AC346E4006E34EE /* HelpViewController.h */,
+				DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */,
 				DAA2FA811AC339CB006E34EE /* HomeViewController.h */,
 				DAA2FA821AC339CB006E34EE /* HomeViewController.m */,
 				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
@@ -97,8 +99,6 @@
 				85D7FADD1AC3073300FA6EB6 /* Images.xcassets */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
-				DAA2FA8C1AC346E4006E34EE /* HelpViewController.h */,
-				DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */,
 			);
 			path = Teatro;
 			sourceTree = "<group>";

@@ -125,7 +125,7 @@
                                     <rect key="frame" x="132" y="416" width="137" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="mailMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="idU-oj-VqZ"/>
+                                    <action selector="mailMe:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="blf-yc-lSx"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help_page_sign" translatesAutoresizingMaskIntoConstraints="NO" id="xK8-Yg-Wgs">
