@@ -15,6 +15,7 @@
 		85D7FAED1AC3073300FA6EB6 /* TeatroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */; };
 		DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA821AC339CB006E34EE /* HomeViewController.m */; };
 		DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA851AC339E9006E34EE /* PecaViewController.m */; };
+		DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		DAA2FA821AC339CB006E34EE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DAA2FA841AC339E9006E34EE /* PecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PecaViewController.h; sourceTree = "<group>"; };
 		DAA2FA851AC339E9006E34EE /* PecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PecaViewController.m; sourceTree = "<group>"; };
+		DAA2FA8C1AC346E4006E34EE /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				85D7FADD1AC3073300FA6EB6 /* Images.xcassets */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
+				DAA2FA8C1AC346E4006E34EE /* HelpViewController.h */,
+				DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */,
 			);
 			path = Teatro;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */,
 				85D7FAD61AC3073300FA6EB6 /* AppDelegate.m in Sources */,
 				DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */,
 				85D7FAD31AC3073300FA6EB6 /* main.m in Sources */,
