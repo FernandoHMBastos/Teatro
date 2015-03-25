@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		85D7FAD31AC3073300FA6EB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAD21AC3073300FA6EB6 /* main.m */; };
 		85D7FAD61AC3073300FA6EB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */; };
-		85D7FAD91AC3073300FA6EB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAD81AC3073300FA6EB6 /* ViewController.m */; };
 		85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADA1AC3073300FA6EB6 /* Main.storyboard */; };
 		85D7FADE1AC3073300FA6EB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADD1AC3073300FA6EB6 /* Images.xcassets */; };
 		85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */; };
 		85D7FAED1AC3073300FA6EB6 /* TeatroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */; };
+		DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA821AC339CB006E34EE /* HomeViewController.m */; };
+		DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA851AC339E9006E34EE /* PecaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		85D7FAD21AC3073300FA6EB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		85D7FAD71AC3073300FA6EB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		85D7FAD81AC3073300FA6EB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		85D7FADB1AC3073300FA6EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85D7FADD1AC3073300FA6EB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		85D7FAE01AC3073300FA6EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		85D7FAE61AC3073300FA6EB6 /* TeatroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7FAEB1AC3073300FA6EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeatroTests.m; sourceTree = "<group>"; };
+		DAA2FA811AC339CB006E34EE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DAA2FA821AC339CB006E34EE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DAA2FA841AC339E9006E34EE /* PecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PecaViewController.h; sourceTree = "<group>"; };
+		DAA2FA851AC339E9006E34EE /* PecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PecaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +86,10 @@
 			children = (
 				85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */,
 				85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */,
-				85D7FAD71AC3073300FA6EB6 /* ViewController.h */,
-				85D7FAD81AC3073300FA6EB6 /* ViewController.m */,
+				DAA2FA811AC339CB006E34EE /* HomeViewController.h */,
+				DAA2FA821AC339CB006E34EE /* HomeViewController.m */,
+				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
+				DAA2FA851AC339E9006E34EE /* PecaViewController.m */,
 				85D7FADA1AC3073300FA6EB6 /* Main.storyboard */,
 				85D7FADD1AC3073300FA6EB6 /* Images.xcassets */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85D7FAD91AC3073300FA6EB6 /* ViewController.m in Sources */,
 				85D7FAD61AC3073300FA6EB6 /* AppDelegate.m in Sources */,
+				DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */,
 				85D7FAD31AC3073300FA6EB6 /* main.m in Sources */,
+				DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +418,7 @@
 				85D7FAF21AC3073300FA6EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85D7FAF31AC3073300FA6EB6 /* Build configuration list for PBXNativeTarget "TeatroTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +427,7 @@
 				85D7FAF51AC3073300FA6EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
