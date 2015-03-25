@@ -17,13 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//oifbdhs jx u dicx ih ci hi 
-//oi gata
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)mailMe:(id)sender {
+    NSURL *url = [NSURL URLWithString:@"mailto:email@email.com"];
+    
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end
