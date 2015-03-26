@@ -10,4 +10,6 @@
 
 @interface PecaViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *FichaTecnicaLabel;
+
 @end
