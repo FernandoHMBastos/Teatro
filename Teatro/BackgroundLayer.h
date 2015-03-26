@@ -14,6 +14,6 @@
 ///Blue gradient background
 +(CAGradientLayer*) blueGradient;
 +(CAGradientLayer*) yellowGradient;
-//+(CAGradientLayer*) redGradient;
++(CAGradientLayer*) greenGradient;
 
 @end
