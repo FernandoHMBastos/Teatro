@@ -9,6 +9,7 @@
 #import "PecaViewController.h"
 
 @interface PecaViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
 
 @end
 

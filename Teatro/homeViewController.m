@@ -7,8 +7,11 @@
 //
 
 #import "HomeViewController.h"
+#import "BackgroundLayer.h"
 
 @interface HomeViewController ()
+
+
 
 @end
 
@@ -17,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    CAGradientLayer *bgLayer = [BackgroundLayer yellowGradient];
+    bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
+    
 }
 
 - (void)didReceiveMemoryWarning {
