@@ -2,8 +2,8 @@
 //  main.m
 //  Teatro
 //
-//  Created by Fernando H M Bastos on 3/25/15.
-//  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
+//  Created by Bepid Campinas on 3/25/15.
+//  Copyright (c) 2015 Bepid Campinas. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

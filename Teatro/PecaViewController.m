@@ -45,10 +45,8 @@
     PecasClasse *Peca = [[PecasClasse alloc] init];
     [Peca chamarPeca];
     
-    self.FichaTecnicaLabel.text = Peca.FichaTecnicaString;
-
-    //[self performSegueWithIdentifier:@"" sender:ModeloPeca];
-    
+    //self.FichaTecnicaLabel.text = Peca.FichaTecnicaString;
+    //self performSegueWithIdentifier:@"" sender:(ModeloPeca);
 }
 
 
