@@ -8,6 +8,7 @@
 
 #import "PecaViewController.h"
 #import "PecasClasse.h"
+#import "BackgroundLayer.h"
 
 @interface PecaViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
@@ -20,6 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    //View para fazer algo quanto a "ABA" HELP aparecer.
+    [super viewWillAppear:animated];
+    CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
+    bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
     
 }
 

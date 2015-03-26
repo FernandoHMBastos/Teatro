@@ -10,8 +10,7 @@
 
 @interface PecasClasse : NSObject
 
-@property (nonatomic, strong) NSString* TituloString;
-@property (nonatomic) NSString* FichaTecnicaString;
+@property (nonatomic, strong) NSString* TituloString; 
 @property (nonatomic, strong) NSString* PrecoString;
 @property (nonatomic, strong) NSString* LocalString;
 @property (nonatomic, strong) NSString* FaixaEtariaString;

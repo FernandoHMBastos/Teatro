@@ -14,8 +14,7 @@
 -(void)chamarPeca{
 
     
-    self.TituloString = @"Bepid Campinas";
-    self.FichaTecnicaString = @"Programa para desenvolvedores";
+    self.TituloString = @"Bepid Campinas" ;
     
     /*Peca.PrecoString = @"Não há";
      Peca.LocalString = @"Instituto Eldorado";
