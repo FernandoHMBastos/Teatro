@@ -41,18 +41,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peças" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4r-52-BOx">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="143" y="49" width="114" height="80"/>
                                 </variation>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teatro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="310-Ao-WQL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="184" width="136" height="119"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="557-xw-WYK"/>
                                 <exclude reference="dtR-dK-A37"/>
                                 <exclude reference="r4r-52-BOx"/>
+                                <exclude reference="310-Ao-WQL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -60,6 +67,7 @@
                                 <include reference="557-xw-WYK"/>
                                 <include reference="dtR-dK-A37"/>
                                 <include reference="r4r-52-BOx"/>
+                                <include reference="310-Ao-WQL"/>
                             </mask>
                         </variation>
                     </view>
@@ -73,11 +81,11 @@
             </objects>
             <point key="canvasLocation" x="798" y="575.25"/>
         </scene>
-        <!--Item-->
+        <!--Peças-->
         <scene sceneID="26p-NL-apm">
             <objects>
                 <navigationController id="55o-c6-Zwc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="08q-d5-C3J"/>
+                    <tabBarItem key="tabBarItem" title="Peças" id="08q-d5-C3J"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b68-S9-qUS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -405,5 +413,6 @@
     </scenes>
     <resources>
         <image name="help_page_sign" width="980" height="980"/>
+        <image name="teatro.jpg" width="400" height="360"/>
     </resources>
 </document>

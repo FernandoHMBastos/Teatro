@@ -36,7 +36,9 @@
     [Peca chamarPeca];
     
     self.FichaTecnicaLabel.text = Peca.FichaTecnicaString;
-    //self performSegueWithIdentifier:@"" sender:(ModeloPeca);
+
+    //[self performSegueWithIdentifier:@"" sender:ModeloPeca];
+    
 }
 
 
