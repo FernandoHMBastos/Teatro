@@ -7,6 +7,7 @@
 //
 
 #import "HelpViewController.h"
+#import "BackgroundLayer.h"
 
 @interface HelpViewController ()
 
@@ -24,6 +25,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     //View para fazer algo quanto a "ABA" HELP aparecer.
     [super viewWillAppear:animated];
+    CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
+    bgLayer.frame = self.view.bounds;
+    [self.view.layer insertSublayer:bgLayer atIndex:0];
     
 }
 
