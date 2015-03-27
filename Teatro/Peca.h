@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FichaTecnica.h"
 
-@interface Pecas : NSObject
+@interface Peca : NSObject
 
 ///strings que a lista de peças precisa ter aceso
 @property (nonatomic, strong) NSString* tituloString;
@@ -19,7 +19,7 @@
 @property (nonatomic, strong) NSString* localString;
 @property (nonatomic, strong) NSString* enderecoString;
 @property (nonatomic, strong) NSString* horarioString;
-@property (nonatomic, strong) FichaTecninca* ficha;
+@property (nonatomic, strong) FichaTecnica* ficha;
 
 @end
 
