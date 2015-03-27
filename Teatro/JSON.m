@@ -30,8 +30,8 @@
     NSData* data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
     
     if (error)
-        
-        NSLog(@"Error reading file1: %@", error.localizedDescription);
+    {
+        NSLog(@"Error reading file1: %@", error.localizedDescription);}
     
     if (data) {
     
@@ -41,7 +41,7 @@
         
         
     }else{
-        //aqui vc manipula seu array
+        //Manipular Array
         NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
         self.listaPecas = [[NSMutableArray alloc] init];
         
@@ -49,6 +49,8 @@
             
             Peca* p = [[Peca alloc] init];
             
+            
+            //Recebendo os parametros que serão dados pelo JSON.txt
             [p setTituloString:[dic objectForKey:@ "Titulo"] ];
             [[p ficha] setGrupoString:[dic objectForKey:@ "Grupo"] ];
             [[p ficha ]setDirecaoString:[dic objectForKey:@ "Direcão"] ];
@@ -63,6 +65,7 @@
             [p setEnderecoString:[dic objectForKey:@ "Endereço"] ];
             [p setGeneroString:[dic objectForKey:@ "Genero"] ];
             
+            //Adicionando ao array listaPecas as informações recebidas pelo JSON
             [self.listaPecas addObject:p];
             
         }
