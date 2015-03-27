@@ -98,7 +98,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual:@"ModeloPeca"]) {
-        [[segue destinationViewController] chamarPeca:pecaEscolhida];
+        //[[segue destinationViewController] chamarPeca:pecaEscolhida];
     }
 }
 

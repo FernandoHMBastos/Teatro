@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSON.h"
 
 @interface HelpViewController : UIViewController
+
+//@property(nonatomic, strong) JSON *j;
+
 
 @end
