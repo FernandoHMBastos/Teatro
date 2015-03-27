@@ -7,6 +7,7 @@
         <!--Peças-->
         <scene sceneID="7II-bQ-ohS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KA4-Nw-cEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="fiA-IX-sjK" customClass="listaPecasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uAR-8n-FkF"/>
@@ -29,15 +30,47 @@
                                     <segue destination="U3P-ct-rgn" kind="show" identifier="ModeloPeca" id="lWE-vd-RUy"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iQb-Zv-y7v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="le5-vJ-0Zj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="le5-vJ-0Zj" id="9LF-Im-WEg">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vxY-xu-q3c">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vxY-xu-q3c" id="tjQ-tb-iWi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DRJ-vC-WGG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DRJ-vC-WGG" id="KG6-Rg-Gnq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="557-xw-WYK"/>
+                                <exclude reference="iQb-Zv-y7v"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="557-xw-WYK"/>
+                                <include reference="iQb-Zv-y7v"/>
                             </mask>
                         </variation>
                     </view>
@@ -45,7 +78,6 @@
                     <navigationItem key="navigationItem" title="Peças" id="Upm-N8-fSa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KA4-Nw-cEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767.25" y="682.875"/>
         </scene>
