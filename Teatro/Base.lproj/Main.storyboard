@@ -7,7 +7,7 @@
         <!--Peças-->
         <scene sceneID="7II-bQ-ohS">
             <objects>
-                <viewController id="fiA-IX-sjK" customClass="PecaViewController" sceneMemberID="viewController">
+                <viewController id="fiA-IX-sjK" customClass="listaPecasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uAR-8n-FkF"/>
                         <viewControllerLayoutGuide type="bottom" id="b8l-vY-lyT"/>

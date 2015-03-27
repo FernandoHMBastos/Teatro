@@ -7,7 +7,7 @@
 //
 
 #import "PecaViewController.h"
-#import "PecasClasse.h"
+#import "Pecas.h"
 #import "BackgroundLayer.h"
 #import "FichaTecnica.h"
 #import "JSON.h"
@@ -71,10 +71,10 @@
     
 }
 
--(void)chamarPeca:(PecasClasse*)peca{
+-(void)chamarPeca:(Pecas*)peca{
     
     ///Aloca as duas classes para que seus valores sejam chamados e levados para as labels
-    //PecasClasse *peca = [[PecasClasse alloc] init];
+    //Pecas *peca = [[Pecas alloc] init];
     FichaTecnica *ficha = [peca ficha];
     
     ///Passa os valores da classe PecasClasse para as labels
