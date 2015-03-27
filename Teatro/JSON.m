@@ -7,6 +7,7 @@
 //
 
 #import "JSON.h"
+#import "Peca.h"
 
 @interface JSON ()
 
@@ -19,36 +20,20 @@
 
 -(void) json
 {
-
-NSString *filepath = [[NSBundle mainBundle] pathForResource:@"TesteTeatro" ofType:@"txt"];
-
-NSError *error;
-
-NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
-
-NSData* data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
-
-if (error)
-
-NSLog(@"Error reading file1: %@", error.localizedDescription);
-
-if (data) {
     
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"TesteTeatro" ofType:@"txt"];
     
+    NSError *error;
     
-    NSMutableArray * listaPecas = [[NSMutableArray alloc] init];
-    for (NSDictionary* dic in array) {
-        Peca* p = [[Peca alloc] init];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-
-        [listaPecas addObject:p];
-    }
+    NSString *fileContents = [NSString stringWithContentsOfFile:filepath encoding:NSUTF8StringEncoding error:&error];
+    
+    NSData* data = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+    
+    if (error)
+        
+        NSLog(@"Error reading file1: %@", error.localizedDescription);
+    
+    if (data) {
     
     if (error) {
         
@@ -57,19 +42,33 @@ if (data) {
         
     }else{
         //aqui vc manipula seu array
-        //for (NSArray *titulo in array) {
-            
-        //}
+        NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        self.listaPecas = [[NSMutableArray alloc] init];
         
-        for (NSArray *teste in array) {
-            teste = [array objectAtIndex: array];
-            NSLog(@"name=%@",[arrayResult objectForKey:@"Grupo"]);
+        for (NSDictionary* dic in array) {
+            
+            Peca* p = [[Peca alloc] init];
+            
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [[p ficha] setGrupoString:[dic objectForKey:@ "Grupo"] ];
+            [[p ficha ]setDirecaoString:[dic objectForKey:@ "Direcão"] ];
+            [p setHorarioString:[dic objectForKey:@ "Horário"] ];
+            [[p ficha]setDuracaoString:[dic objectForKey:@ "Duração"] ];
+            [p setFaixaEtariaString:[dic objectForKey:@ "Faixa Etária"] ];
+            [p setPrecoString:[dic objectForKey:@ "Preço"] ];
+            [[p ficha]setSinopseString:[dic objectForKey:@ "Sinopse"] ];
+            [[p ficha]setElencoString:[dic objectForKey:@ "Elenco"] ];
+            [p setLocalString:[dic objectForKey:@ "Local"] ];
+            [[p ficha]setContatoString:[dic objectForKey:@ "Contato"] ];
+            [p setEnderecoString:[dic objectForKey:@ "Endereço"] ];
+            [p setGeneroString:[dic objectForKey:@ "Genero"] ];
+            
+            [self.listaPecas addObject:p];
             
         }
-        
-        
         }
     }
+
 }
 
 @end

@@ -12,4 +12,6 @@
 
 -(void) json;
 
+@property(nonatomic, strong) NSMutableArray *listaPecas;
+
 @end
