@@ -22,41 +22,35 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="177" y="229" width="157" height="30"/>
+                                    <rect key="frame" x="196" y="559" width="157" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="VerPeca:" destination="fiA-IX-sjK" eventType="touchUpInside" id="OI9-z4-vW9"/>
                                     <segue destination="U3P-ct-rgn" kind="show" identifier="ModeloPeca" id="lWE-vd-RUy"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-dK-A37">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-t0-BZI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="76" y="369" width="316" height="216"/>
+                                    <rect key="frame" x="16" y="72" width="343" height="447"/>
                                 </variation>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teatro.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="310-Ao-WQL">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="184" width="136" height="119"/>
-                                </variation>
-                            </imageView>
+                                <connections>
+                                    <outlet property="dataSource" destination="fiA-IX-sjK" id="bMv-Ry-8dE"/>
+                                    <outlet property="delegate" destination="fiA-IX-sjK" id="hYC-Z4-G9d"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="557-xw-WYK"/>
-                                <exclude reference="dtR-dK-A37"/>
-                                <exclude reference="310-Ao-WQL"/>
+                                <exclude reference="Xka-t0-BZI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="557-xw-WYK"/>
-                                <include reference="dtR-dK-A37"/>
-                                <include reference="310-Ao-WQL"/>
+                                <include reference="Xka-t0-BZI"/>
                             </mask>
                         </variation>
                     </view>
@@ -64,12 +58,12 @@
                     <navigationItem key="navigationItem" title="Peças" id="Upm-N8-fSa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="FichaTecnicaLabel" destination="dtR-dK-A37" id="dTM-Or-pGp"/>
+                        <outlet property="listaPecas" destination="Xka-t0-BZI" id="rkv-BV-W0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KA4-Nw-cEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="683.25"/>
+            <point key="canvasLocation" x="767.25" y="682.875"/>
         </scene>
         <!--Peças-->
         <scene sceneID="26p-NL-apm">
@@ -475,6 +469,5 @@
     </scenes>
     <resources>
         <image name="help_page_sign" width="980" height="980"/>
-        <image name="teatro.jpg" width="400" height="360"/>
     </resources>
 </document>

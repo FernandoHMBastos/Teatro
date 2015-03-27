@@ -13,7 +13,7 @@
 
 
 
-@interface PecaViewController ()
+@interface PecaViewController () <UITableViewDelegate, UITableViewDataSource>
 
 ///Labels da view de cada peça (as que tem "Peca"no nome são para não serem duplicadas, pois na view de lista de peças já existe o campo
 @property (weak, nonatomic) IBOutlet UIImageView *imagemPeca;
@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contatoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *enderecoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *generoPecaLabel;
+@property (weak, nonatomic) IBOutlet UITableView *listaPecas;
 
 ///Labels da view de lista de peças
 @property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
