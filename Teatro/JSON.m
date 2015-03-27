@@ -35,19 +35,7 @@ NSLog(@"Error reading file1: %@", error.localizedDescription);
 if (data) {
     
     NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    
-    
-    NSMutableArray * listaPecas = [[NSMutableArray alloc] init];
-    for (NSDictionary* dic in array) {
-        Peca* p = [[Peca alloc] init];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-        [p setTituloString:[dic objectForKey:@ "Titulo"] ];
 
-        [listaPecas addObject:p];
     }
     
     if (error) {
@@ -57,14 +45,18 @@ if (data) {
         
     }else{
         //aqui vc manipula seu array
-        //for (NSArray *titulo in array) {
-            
-        //}
         
-        for (NSArray *teste in array) {
-            teste = [array objectAtIndex: array];
-            NSLog(@"name=%@",[arrayResult objectForKey:@"Grupo"]);
+        NSMutableArray * listaPecas = [[NSMutableArray alloc] init];
+        for (NSDictionary* dic in array) {
+            Peca* p = [[Peca alloc] init];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
+            [p setTituloString:[dic objectForKey:@ "Titulo"] ];
             
+            [listaPecas addObject:p];
         }
         
         
