@@ -10,12 +10,13 @@
 
 @interface PecasClasse : NSObject
 
-@property (nonatomic, strong) NSString* TituloString; 
-@property (nonatomic, strong) NSString* PrecoString;
-@property (nonatomic, strong) NSString* LocalString;
-@property (nonatomic, strong) NSString* FaixaEtariaString;
-@property (nonatomic, strong) NSString* GrupoString;
-@property (nonatomic, strong) NSString* GeneroString;
+///strings que a lista de peças precisa ter aceso
+@property (nonatomic, strong) NSString* tituloString;
+@property (nonatomic, strong) NSString* precoString;
+@property (nonatomic, strong) NSString* faixaEtariaString;
+@property (nonatomic, strong) NSString* generoString;
+@property (nonatomic, strong) NSString* localString;
+@property (nonatomic, strong) NSString* enderecoString;
 
 -(void)chamarPeca;
 

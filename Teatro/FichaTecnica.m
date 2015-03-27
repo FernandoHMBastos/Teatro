@@ -8,6 +8,12 @@
 
 #import "FichaTecnica.h"
 
+
+@interface FichaTecnica ()
+
+
+@end
+
 @implementation FichaTecnica
 
 @end

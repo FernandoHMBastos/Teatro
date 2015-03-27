@@ -8,6 +8,11 @@
 
 #import "PecasClasse.h"
 
+@interface PecasClasse ()
+
+
+@end
+
 @implementation PecasClasse
 
 
