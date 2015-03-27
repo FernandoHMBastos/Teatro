@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FichaTecnica.h"
 
 @interface PecasClasse : NSObject
 
@@ -18,5 +19,10 @@
 @property (nonatomic, strong) NSString* localString;
 @property (nonatomic, strong) NSString* enderecoString;
 @property (nonatomic, strong) NSString* horarioString;
+@property (nonatomic, strong) FichaTecninca* ficha;
 
 @end
+
+
+// Peca* p = [[Peca alloc] init]
+// [[p ficha] setDirecaoString:@"Ramon"]

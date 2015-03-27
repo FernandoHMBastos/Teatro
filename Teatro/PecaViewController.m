@@ -10,6 +10,7 @@
 #import "PecasClasse.h"
 #import "BackgroundLayer.h"
 #import "FichaTecnica.h"
+#import "JSON.h"
 
 
 
@@ -44,8 +45,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
+    JSON *json = [[JSON alloc] init];
+    [json json];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,6 +62,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 - (IBAction)VerPeca:(id)sender {
@@ -68,11 +71,11 @@
     
 }
 
--(void)chamarPeca{
+-(void)chamarPeca:(PecasClasse*)peca{
     
     ///Aloca as duas classes para que seus valores sejam chamados e levados para as labels
-    PecasClasse *peca = [[PecasClasse alloc] init];
-    FichaTecnica *ficha = [[FichaTecnica alloc] init];
+    //PecasClasse *peca = [[PecasClasse alloc] init];
+    FichaTecnica *ficha = [peca ficha];
     
     ///Passa os valores da classe PecasClasse para as labels
     self.tituloPecaLabel.text = peca.tituloString;
@@ -91,6 +94,12 @@
     self.elencoLabel.text = ficha.elencoString;
     self.contatoLabel.text = ficha.contatoString;
     
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqual:@"ModeloPeca"]) {
+        [[segue destinationViewController] chamarPeca:pecaEscolhida];
+    }
 }
 
 

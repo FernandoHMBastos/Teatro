@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PecasClasse.h"
 
-@interface FichaTecnica : PecasClasse
+@interface FichaTecnica : NSObject
 
 ///Strings que cada peça precisa ter acesso, referentes à ficha técnica
 @property (nonatomic, strong) NSString* sinopseString;
