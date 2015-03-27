@@ -16,26 +16,19 @@
 @implementation PecasClasse
 
 
--(void)chamarPeca{
+/*-(void)chamarPeca{
 
+    self.tituloPecaLabel.text = self.tituloString;
+    self.grupoLabel.text = self.grupoString;
+    self.direcaoLabel.text = self.direcaoString;
+    self.horarioLabel.text = self.horarioString;
+    self.duracaoLabel.text = self.duracaoString;
+    self.faixaEtariaLabel.text = self.faixaEtariaString;
+    self.tituloPecaLabel.text = self.tituloString;
+    self.tituloPecaLabel.text = self.tituloString;
+    self.tituloPecaLabel.text = self.tituloString;
+    self.tituloPecaLabel.text = self.tituloString;
     
-    self.TituloString = @"Bepid Campinas" ;
-    
-    /*Peca.PrecoString = @"Não há";
-     Peca.LocalString = @"Instituto Eldorado";
-     Peca.FaixaEtariaString = @"Acima de 16 anos";
-     Peca.GrupoString = @"Eldorado Campinas";
-     Peca.GeneroString = @"TI";*/
-    
-    
-   /* NSLog(@"Titulo da Peça: %@", self.TituloString);
-    NSLog(@"Ficha Tecnica: %@", self.FichaTecnicaString);
-    NSLog(@"Preços: %@", self.PrecoString);
-    NSLog(@"Local: %@", self.LocalString);
-    NSLog(@"Faixa Etária: %@", self.FaixaEtariaString);
-    NSLog(@"Grupo: %@", self.GrupoString);
-    NSLog(@"Genero: %@", self.GeneroString);*/
-    
-}
+}*/
 
 @end

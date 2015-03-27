@@ -16,8 +16,9 @@
 @property (nonatomic, strong) NSString* grupoString;
 @property (nonatomic, strong) NSString* direcaoString;
 @property (nonatomic, strong) NSString* elencoString;
-@property (nonatomic, strong) NSString* horarioString;
 @property (nonatomic, strong) NSString* duracaoString;
 @property (nonatomic, strong) NSString* contatoString;
+
+
 
 @end

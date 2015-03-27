@@ -9,6 +9,7 @@
 #import "PecaViewController.h"
 #import "PecasClasse.h"
 #import "BackgroundLayer.h"
+#import "FichaTecnica.h"
 
 
 
@@ -19,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tituloPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *grupoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *direcaoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *horarioLabel;
+@property (weak, nonatomic) IBOutlet UILabel *horarioPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *duracaoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *faixaEtariaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *precoPecaLabel;
@@ -43,6 +44,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,10 +63,33 @@
 
 - (IBAction)VerPeca:(id)sender {
     
+    [self chamarPeca];
     
+}
+
+-(void)chamarPeca{
     
-    PecasClasse *Peca = [[PecasClasse alloc] init];
-    [Peca chamarPeca];
+    ///Aloca as duas classes para que seus valores sejam chamados e levados para as labels
+    PecasClasse *peca = [[PecasClasse alloc] init];
+    FichaTecnica *ficha = [[FichaTecnica alloc] init];
+    
+    ///Passa os valores da classe PecasClasse para as labels
+    self.tituloPecaLabel.text = peca.tituloString;
+    self.horarioPecaLabel.text = peca.horarioString;
+    self.faixaEtariaLabel.text = peca.faixaEtariaString;
+    self.precoPecaLabel.text = peca.precoString;
+    self.localPecaLabel.text = peca.localString;
+    self.enderecoLabel.text = peca.enderecoString;
+    self.generoPecaLabel.text = peca.generoString;
+    
+    ///Passa os valores da classe FichaTécnica para as labels
+    self.grupoLabel.text = ficha.grupoString;
+    self.direcaoLabel.text = ficha.direcaoString;
+    self.duracaoLabel.text = ficha.duracaoString;
+    self.sinopseLabel.text = ficha.sinopseString;
+    self.elencoLabel.text = ficha.elencoString;
+    self.contatoLabel.text = ficha.contatoString;
+    
 }
 
 

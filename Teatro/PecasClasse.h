@@ -17,7 +17,8 @@
 @property (nonatomic, strong) NSString* generoString;
 @property (nonatomic, strong) NSString* localString;
 @property (nonatomic, strong) NSString* enderecoString;
+@property (nonatomic, strong) NSString* horarioString;
 
--(void)chamarPeca;
+//-(void)chamarPeca;
 
 @end

@@ -288,7 +288,7 @@
                         <outlet property="faixaEtariaLabel" destination="3sa-ym-jdh" id="tJ5-to-eDM"/>
                         <outlet property="generoPecaLabel" destination="qTp-9x-XVR" id="wOm-C1-WuK"/>
                         <outlet property="grupoLabel" destination="SbW-6a-m3r" id="p2B-Ge-nrw"/>
-                        <outlet property="horarioLabel" destination="taE-DZ-GtB" id="sir-Do-w8W"/>
+                        <outlet property="horarioPecaLabel" destination="taE-DZ-GtB" id="GaN-AM-ETI"/>
                         <outlet property="imagemPeca" destination="dIo-4F-Q9G" id="bBS-GI-oo6"/>
                         <outlet property="localPecaLabel" destination="mLE-S5-Jhk" id="Btg-cG-JIR"/>
                         <outlet property="precoPecaLabel" destination="zMz-AR-YLb" id="qkI-jW-KvF"/>
