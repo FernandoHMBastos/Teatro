@@ -10,6 +10,6 @@
 
 @interface listaPecasViewController : UITableViewController
 
-@property(nonatomic, strong) NSMutableArray *listaPecas;
+//@property(nonatomic, strong) NSMutableArray *listaPecas;
 
 @end
