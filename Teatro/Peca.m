@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
 //
 
-#import "Pecas.h"
+#import "Peca.h"
 
-@interface Pecas ()
+@interface Peca ()
 
 
 @end
 
-@implementation Pecas
+@implementation Peca
 
 
 @end

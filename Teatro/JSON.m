@@ -7,7 +7,7 @@
 //
 
 #import "JSON.h"
-#import "Pecas.h"
+#import "Peca.h"
 
 @interface JSON ()
 
@@ -47,7 +47,7 @@
         
         for (NSDictionary* dic in array) {
             
-            Pecas* p = [[Pecas alloc] init];
+            Peca* p = [[Peca alloc] init];
             
             [p setTituloString:[dic objectForKey:@ "Titulo"] ];
             [[p ficha] setGrupoString:[dic objectForKey:@ "Grupo"] ];
