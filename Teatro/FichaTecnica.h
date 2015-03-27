@@ -19,5 +19,4 @@
 @property (nonatomic, strong) NSString* duracaoString;
 @property (nonatomic, strong) NSString* contatoString;
 
-
 @end
