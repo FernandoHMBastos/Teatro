@@ -19,6 +19,4 @@
 @property (nonatomic, strong) NSString* enderecoString;
 @property (nonatomic, strong) NSString* horarioString;
 
-//-(void)chamarPeca;
-
 @end
