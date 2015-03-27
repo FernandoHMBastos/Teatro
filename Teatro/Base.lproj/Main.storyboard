@@ -29,37 +29,21 @@
                                     <segue destination="U3P-ct-rgn" kind="show" identifier="ModeloPeca" id="lWE-vd-RUy"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Xka-t0-BZI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="72" width="343" height="447"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="fiA-IX-sjK" id="bMv-Ry-8dE"/>
-                                    <outlet property="delegate" destination="fiA-IX-sjK" id="hYC-Z4-G9d"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="557-xw-WYK"/>
-                                <exclude reference="Xka-t0-BZI"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="557-xw-WYK"/>
-                                <include reference="Xka-t0-BZI"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Peças" id="2M4-GZ-f4F"/>
                     <navigationItem key="navigationItem" title="Peças" id="Upm-N8-fSa"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="listaPecas" destination="Xka-t0-BZI" id="rkv-BV-W0l"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KA4-Nw-cEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
