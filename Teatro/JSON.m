@@ -77,12 +77,6 @@
 
             
             self.listaPecas = self.mutableSortedArray;
-            
-            NSLog(@"%@",self.listaPecas);
-            
-            //listaPecas está vazia
-
-           
 
             
         }

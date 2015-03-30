@@ -22,12 +22,12 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-   
-    JSON *j = [[JSON alloc] init];
+   //Criado objeto para imprimir a Array que contém as informações da Peça.
+  /*  JSON *j = [[JSON alloc] init];
     [j json];
     
     NSLog(@"%@", [j mutableSortedArray]);
-    //nada em j
+    */
 }
 
 
