@@ -27,7 +27,7 @@
     [j json];
     
     NSLog(@"%@",j.listaPecas);
-    //valores de j estão nulos
+    //nada em j
 }
 
 

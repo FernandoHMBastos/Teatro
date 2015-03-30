@@ -11,7 +11,4 @@
 
 @interface HelpViewController : UIViewController
 
-//@property(nonatomic, strong) JSON *j;
-
-
 @end
