@@ -24,6 +24,8 @@
     // Do any additional setup after loading the view, typically from a nib.
    
     JSON *j = [[JSON alloc] init];
+    [j json];
+    
     NSLog(@"%@",j.listaPecas);
     //valores de j estão nulos
 }
