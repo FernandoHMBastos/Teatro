@@ -11,7 +11,7 @@
 
 @interface Peca : NSObject
 
-///strings que a lista de peças precisa ter aceso
+///strings que a lista de peças precisa ter acesso
 @property (nonatomic, strong) NSString* TituloString;
 @property (nonatomic, strong) NSString* PrecoString;
 @property (nonatomic, strong) NSString* FaixaEtariaString;

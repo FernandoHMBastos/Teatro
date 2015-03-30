@@ -13,8 +13,7 @@
 	“Contato” : “vamoquevamo@gmail.com”,
 	“Endereço” : “Rua sem volta”,
 	“Gênero” : “Teatro Nômade”
-}
-,
+},
 {
 “Título” : “A Ida2”,
 “Grupo” : “Os que foram”,

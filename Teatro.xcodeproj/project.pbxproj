@@ -17,6 +17,7 @@
 		DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA821AC339CB006E34EE /* HomeViewController.m */; };
 		DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA851AC339E9006E34EE /* PecaViewController.m */; };
 		DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */; };
+		DAA47B0A1AC9B85C00C68243 /* Teste2.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAA47B091AC9B85C00C68243 /* Teste2.txt */; };
 		FF09B0721AC46676007E21A4 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF09B0711AC46676007E21A4 /* BackgroundLayer.m */; };
 		FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */; };
 		FF36E2BF1AC5DB9800B9D147 /* listaPecasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF36E2BE1AC5DB9800B9D147 /* listaPecasViewController.m */; };
@@ -54,6 +55,7 @@
 		DAA2FA851AC339E9006E34EE /* PecaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PecaViewController.m; sourceTree = "<group>"; };
 		DAA2FA8C1AC346E4006E34EE /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		DAA47B091AC9B85C00C68243 /* Teste2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Teste2.txt; sourceTree = "<group>"; };
 		FF09B0701AC46676007E21A4 /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		FF09B0711AC46676007E21A4 /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
 		FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TesteTeatro.txt; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */,
+				DAA47B091AC9B85C00C68243 /* Teste2.txt */,
 				85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */,
 				85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */,
 				85D7FADA1AC3073300FA6EB6 /* Main.storyboard */,
@@ -245,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAA47B0A1AC9B85C00C68243 /* Teste2.txt in Resources */,
 				85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */,
 				85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */,
 				85D7FADE1AC3073300FA6EB6 /* Images.xcassets in Resources */,

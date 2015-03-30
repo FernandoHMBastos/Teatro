@@ -21,7 +21,7 @@
 -(void) json
 {
     
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"TesteTeatro" ofType:@"txt"];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"Teste2" ofType:@"txt"];
     
     NSError *error;
     
