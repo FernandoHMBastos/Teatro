@@ -22,12 +22,7 @@
     [super viewDidLoad];
     
     // Do any additional setup after loading the view, typically from a nib.
-   
-    JSON *j = [[JSON alloc] init];
-    [j json];
     
-    NSLog(@"%@",j.listaPecas);
-    //nada em j
 }
 
 

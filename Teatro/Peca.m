@@ -15,5 +15,13 @@
 
 @implementation Peca
 
-
+-(instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.ficha = [[FichaTecnica alloc] init];
+        self.TituloString = @"Sem Título";
+    }
+    return self;
+}
 @end

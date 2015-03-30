@@ -56,7 +56,7 @@
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
-    
+    [self chamarPeca:self.peca];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,42 +65,37 @@
     
 }
 
-- (IBAction)VerPeca:(id)sender {
-    
-    [self chamarPeca];
-    
-}
-
 -(void)chamarPeca:(Peca*)peca{
     
     ///Aloca as duas classes para que seus valores sejam chamados e levados para as labels
     //Pecas *peca = [[Pecas alloc] init];
+    
     FichaTecnica *ficha = [peca ficha];
     
     ///Passa os valores da classe PecasClasse para as labels
-    self.tituloPecaLabel.text = peca.tituloString;
-    self.horarioPecaLabel.text = peca.horarioString;
-    self.faixaEtariaLabel.text = peca.faixaEtariaString;
-    self.precoPecaLabel.text = peca.precoString;
-    self.localPecaLabel.text = peca.localString;
-    self.enderecoLabel.text = peca.enderecoString;
-    self.generoPecaLabel.text = peca.generoString;
+    self.tituloPecaLabel.text = peca.TituloString;
+    self.horarioPecaLabel.text = peca.HorarioString;
+    self.faixaEtariaLabel.text = peca.FaixaEtariaString;
+    self.precoPecaLabel.text = peca.PrecoString;
+    self.localPecaLabel.text = peca.LocalString;
+    self.enderecoLabel.text = peca.EnderecoString;
+    self.generoPecaLabel.text = peca.GeneroString;
     
     ///Passa os valores da classe FichaTécnica para as labels
-    self.grupoLabel.text = ficha.grupoString;
-    self.direcaoLabel.text = ficha.direcaoString;
-    self.duracaoLabel.text = ficha.duracaoString;
-    self.sinopseLabel.text = ficha.sinopseString;
-    self.elencoLabel.text = ficha.elencoString;
-    self.contatoLabel.text = ficha.contatoString;
+    self.grupoLabel.text = ficha.GrupoString;
+    self.direcaoLabel.text = ficha.DirecaoString;
+    self.duracaoLabel.text = ficha.DuracaoString;
+    self.sinopseLabel.text = ficha.SinopseString;
+    self.elencoLabel.text = ficha.ElencoString;
+    self.contatoLabel.text = ficha.ContatoString;
     
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqual:@"ModeloPeca"]) {
-        //[[segue destinationViewController] chamarPeca:pecaEscolhida];
+        [[segue destinationViewController] chamarPeca:pecaEscolhida];
     }
-}
+}*/
 
 
 

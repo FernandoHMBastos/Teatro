@@ -11,12 +11,23 @@
 
 @interface JSON ()
 
-+ (NSArray *)groupsFromJSON:(NSData *)objectNotation error:(NSError **)error;
+//+ (NSArray *)groupsFromJSON:(NSData *)objectNotation error:(NSError **)error;
 
 @end
 
 
 @implementation JSON
+
+-(instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.listaPecas = [[NSMutableArray alloc] init];
+        self.mutableSortedArray = [[NSMutableArray alloc] init];
+        
+    }
+    return self;
+}
 
 -(void) json
 {
@@ -42,26 +53,26 @@
             
         }else{
             //aqui vc manipula seu array
-            NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+            NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
             self.listaPecas = [[NSMutableArray alloc] init];
             
-            for (NSDictionary* dic in array) {
+            for (NSDictionary *pecaDict in dict[@"Peças"]) {
                 
                 Peca* p = [[Peca alloc] init];
                 
-                [p setTituloString:[dic objectForKey:@ "Titulo"] ];
-                [[p ficha] setGrupoString:[dic objectForKey:@ "Grupo"] ];
-                [[p ficha ]setDirecaoString:[dic objectForKey:@ "Direcão"] ];
-                [p setHorarioString:[dic objectForKey:@ "Horário"] ];
-                [[p ficha]setDuracaoString:[dic objectForKey:@ "Duração"] ];
-                [p setFaixaEtariaString:[dic objectForKey:@ "Faixa Etária"] ];
-                [p setPrecoString:[dic objectForKey:@ "Preço"] ];
-                [[p ficha]setSinopseString:[dic objectForKey:@ "Sinopse"] ];
-                [[p ficha]setElencoString:[dic objectForKey:@ "Elenco"] ];
-                [p setLocalString:[dic objectForKey:@ "Local"] ];
-                [[p ficha]setContatoString:[dic objectForKey:@ "Contato"] ];
-                [p setEnderecoString:[dic objectForKey:@ "Endereço"] ];
-                [p setGeneroString:[dic objectForKey:@ "Genero"] ];
+                [p setTituloString:[pecaDict objectForKey:@ "Titulo"] ];
+                [[p ficha] setGrupoString:[pecaDict objectForKey:@ "Grupo"] ];
+                [[p ficha ]setDirecaoString:[pecaDict objectForKey:@ "Direcao"] ];
+                [p setHorarioString:[pecaDict objectForKey:@ "Horario"] ];
+                [[p ficha]setDuracaoString:[pecaDict objectForKey:@ "Duracao"] ];
+                [p setFaixaEtariaString:[pecaDict objectForKey:@ "Faixa Etaria"] ];
+                [p setPrecoString:[pecaDict objectForKey:@ "Preco"] ];
+                [[p ficha]setSinopseString:[pecaDict objectForKey:@ "Sinopse"] ];
+                [[p ficha]setElencoString:[pecaDict objectForKey:@ "Elenco"] ];
+                [p setLocalString:[pecaDict objectForKey:@ "Local"] ];
+                [[p ficha]setContatoString:[pecaDict objectForKey:@ "Contato"] ];
+                [p setEnderecoString:[pecaDict objectForKey:@ "Endereco"] ];
+                [p setGeneroString:[pecaDict objectForKey:@ "Genero"] ];
                 
                 [self.listaPecas addObject:p];
                 
@@ -69,18 +80,16 @@
             
            //organiza o array em ordem de acordo com uma chave
             
-            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"tituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"TituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
             
             NSArray *sortedArray = [self.listaPecas sortedArrayUsingDescriptors:@[sort]];
             
-            NSMutableArray *mutableSortedArray = [sortedArray copy];
+            self.mutableSortedArray = [sortedArray copy];
 
             
-            self.listaPecas = mutableSortedArray;
+            self.listaPecas = self.mutableSortedArray;
             
-            NSLog(@"%@",self.listaPecas);
-            
-            //listaPecas está vazia
+            NSLog(@"%@", self.listaPecas);
 
            
 
