@@ -13,7 +13,7 @@
 		85D7FADE1AC3073300FA6EB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADD1AC3073300FA6EB6 /* Images.xcassets */; };
 		85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */; };
 		85D7FAED1AC3073300FA6EB6 /* TeatroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */; };
-		DA5532D01AC46D94009CEB59 /* Pecas.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5532CF1AC46D94009CEB59 /* Pecas.m */; };
+		DA5532D01AC46D94009CEB59 /* Peca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5532CF1AC46D94009CEB59 /* Peca.m */; };
 		DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA821AC339CB006E34EE /* HomeViewController.m */; };
 		DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA851AC339E9006E34EE /* PecaViewController.m */; };
 		DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */; };
@@ -46,8 +46,8 @@
 		85D7FAE61AC3073300FA6EB6 /* TeatroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7FAEB1AC3073300FA6EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeatroTests.m; sourceTree = "<group>"; };
-		DA5532CE1AC46D94009CEB59 /* Pecas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pecas.h; sourceTree = "<group>"; };
-		DA5532CF1AC46D94009CEB59 /* Pecas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pecas.m; sourceTree = "<group>"; };
+		DA5532CE1AC46D94009CEB59 /* Peca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peca.h; sourceTree = "<group>"; };
+		DA5532CF1AC46D94009CEB59 /* Peca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peca.m; sourceTree = "<group>"; };
 		DAA2FA811AC339CB006E34EE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		DAA2FA821AC339CB006E34EE /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		DAA2FA841AC339E9006E34EE /* PecaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PecaViewController.h; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 		DA5532CA1AC46D11009CEB59 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				DA5532CE1AC46D94009CEB59 /* Pecas.h */,
-				DA5532CF1AC46D94009CEB59 /* Pecas.m */,
+				DA5532CE1AC46D94009CEB59 /* Peca.h */,
+				DA5532CF1AC46D94009CEB59 /* Peca.m */,
 				FFB52B9D1AC48ACC00261776 /* FichaTecnica.h */,
 				FFB52B9E1AC48ACC00261776 /* FichaTecnica.m */,
 				FF95F0E41AC5A545000D296E /* JSON.h */,
@@ -267,7 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */,
-				DA5532D01AC46D94009CEB59 /* Pecas.m in Sources */,
+				DA5532D01AC46D94009CEB59 /* Peca.m in Sources */,
 				85D7FAD61AC3073300FA6EB6 /* AppDelegate.m in Sources */,
 				FF36E2BF1AC5DB9800B9D147 /* listaPecasViewController.m in Sources */,
 				FFB52B9F1AC48ACC00261776 /* FichaTecnica.m in Sources */,

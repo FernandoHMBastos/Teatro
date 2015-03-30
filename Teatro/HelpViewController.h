@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSON.h"
 
 @interface HelpViewController : UIViewController
 
