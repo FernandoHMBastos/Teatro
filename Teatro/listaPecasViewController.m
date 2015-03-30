@@ -38,12 +38,15 @@
 
 #pragma mark - Table view data source
 
+//Inicializa com o numero de seções da table view valendo 1(Não é necessário mais, pois a propria tableview replica o number of sections
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
+
+//Método que indica quantos objetos(Peças) possui o dictionary retirado do JSON
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //#warning Incomplete method implementation.
     // Return the number of rows in the section.
@@ -52,9 +55,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Identifica a tableview com o nome cell
     static NSString *CellIdentifier = @"cell";
     listaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    //Troca a Label titulo pelo nome do titulo da peça para ser mostrado na lista do tableview
     Peca *peca = self.lista[indexPath.row];
     cell.titulo.text = peca.TituloString;
     
@@ -101,12 +106,16 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ 
+    //Indentifica o Segue, ou seja, mostra o que deve ser feito quanto o usuário clicar em algum item da lista da tableview
     if ([segue.identifier isEqualToString:@"Detail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Peca *peca = self.lista[indexPath.row];
-
+        
+    //Cria um objeto da Peca view controller para manipular as variaveis neles contidos e mostrar a label da pagina de descrição da peça(Tela em azul e amarelo que contem as informações da Peça) que está ligada a PecaViewController.
         PecaViewController *pecaViewController = [segue destinationViewController];
         pecaViewController.peca = peca;
+        
     }
     
     // Get the new view controller using [segue destinationViewController].

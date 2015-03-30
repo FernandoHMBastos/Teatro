@@ -56,6 +56,8 @@
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
+    
+    //Chama o método chamarpeca que mostra na tela a descricao da peca
     [self chamarPeca:self.peca];
 }
 
