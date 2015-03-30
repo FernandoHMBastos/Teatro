@@ -88,12 +88,12 @@
     self.generoPecaLabel.text = peca.GeneroString;
     
     ///Passa os valores da classe FichaTécnica para as labels
-    self.grupoLabel.text = ficha.grupoString;
-    self.direcaoLabel.text = ficha.direcaoString;
-    self.duracaoLabel.text = ficha.duracaoString;
-    self.sinopseLabel.text = ficha.sinopseString;
-    self.elencoLabel.text = ficha.elencoString;
-    self.contatoLabel.text = ficha.contatoString;
+    self.grupoLabel.text = ficha.GrupoString;
+    self.direcaoLabel.text = ficha.DirecaoString;
+    self.duracaoLabel.text = ficha.DuracaoString;
+    self.sinopseLabel.text = ficha.SinopseString;
+    self.elencoLabel.text = ficha.ElencoString;
+    self.contatoLabel.text = ficha.ContatoString;
     
 }
 

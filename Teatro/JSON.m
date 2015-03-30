@@ -21,7 +21,7 @@
 -(void) json
 {
     
-    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"Teste2" ofType:@"txt"];
+    NSString *filepath = [[NSBundle mainBundle] pathForResource:@"TesteTeatro" ofType:@"txt"];
     
     NSError *error;
     
@@ -51,16 +51,16 @@
                 
                 [p setTituloString:[dic objectForKey:@ "Titulo"] ];
                 [[p ficha] setGrupoString:[dic objectForKey:@ "Grupo"] ];
-                [[p ficha ]setDirecaoString:[dic objectForKey:@ "Direcão"] ];
-                [p setHorarioString:[dic objectForKey:@ "Horário"] ];
-                [[p ficha]setDuracaoString:[dic objectForKey:@ "Duração"] ];
-                [p setFaixaEtariaString:[dic objectForKey:@ "Faixa Etária"] ];
-                [p setPrecoString:[dic objectForKey:@ "Preço"] ];
+                [[p ficha ]setDirecaoString:[dic objectForKey:@ "Direcao"] ];
+                [p setHorarioString:[dic objectForKey:@ "Horario"] ];
+                [[p ficha]setDuracaoString:[dic objectForKey:@ "Duracao"] ];
+                [p setFaixaEtariaString:[dic objectForKey:@ "Faixa Etaria"] ];
+                [p setPrecoString:[dic objectForKey:@ "Preco"] ];
                 [[p ficha]setSinopseString:[dic objectForKey:@ "Sinopse"] ];
                 [[p ficha]setElencoString:[dic objectForKey:@ "Elenco"] ];
                 [p setLocalString:[dic objectForKey:@ "Local"] ];
                 [[p ficha]setContatoString:[dic objectForKey:@ "Contato"] ];
-                [p setEnderecoString:[dic objectForKey:@ "Endereço"] ];
+                [p setEnderecoString:[dic objectForKey:@ "Endereco"] ];
                 [p setGeneroString:[dic objectForKey:@ "Genero"] ];
                 
                 [self.listaPecas addObject:p];
@@ -69,14 +69,14 @@
             
            //organiza o array em ordem de acordo com uma chave
             
-            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"tituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+            NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"TituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
             
             NSArray *sortedArray = [self.listaPecas sortedArrayUsingDescriptors:@[sort]];
             
-            NSMutableArray *mutableSortedArray = [sortedArray copy];
+            self.mutableSortedArray = [sortedArray copy];
 
             
-            self.listaPecas = mutableSortedArray;
+            self.listaPecas = self.mutableSortedArray;
             
             NSLog(@"%@",self.listaPecas);
             

@@ -26,7 +26,7 @@
     JSON *j = [[JSON alloc] init];
     [j json];
     
-    NSLog(@"%@",j.listaPecas);
+    NSLog(@"%@", j.mutableSortedArray);
     //nada em j
 }
 
