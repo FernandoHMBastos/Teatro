@@ -1,4 +1,6 @@
-﻿[
+﻿{
+
+"Peças": [
 {
 	"Titulo" : "A Ida",
 	"Grupo" : "Os que foram",
@@ -15,7 +17,7 @@
 	"Genero" : "Teatro Nômade"
 },
 {
-"Titulo" : "A Ida2",
+"Titulo" : "A Volta",
 "Grupo" : "Os que foram",
 "Direcao" : "Muitos",
 "Horario" : "19:25",
@@ -30,3 +32,4 @@
 "Genero" : "Teatro Nômade"
 }
 ]
+}

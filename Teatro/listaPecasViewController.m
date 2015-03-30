@@ -7,8 +7,14 @@
 //
 
 #import "listaPecasViewController.h"
+#import "listaTableViewCell.h"
+#import "Peca.h"
+#import "PecaViewController.h"
 
 @interface listaPecasViewController ()
+
+///Recebe a lista
+@property(nonatomic, strong) NSMutableArray *lista;
 
 @end
 
@@ -17,36 +23,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    ///Chama a mutable array do json e passa os dados para a lista daqui
+     JSON *lista = [[JSON alloc] init];
+    [lista json];
+    self.lista = lista.listaPecas;
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[self lista] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"cell";
+    listaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    Peca *peca = self.lista[indexPath.row];
+    cell.titulo.text = peca.TituloString;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -82,14 +96,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Detail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Peca *peca = self.lista[indexPath.row];
+
+        PecaViewController *pecaViewController = [segue destinationViewController];
+        pecaViewController.peca = peca;
+    }
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

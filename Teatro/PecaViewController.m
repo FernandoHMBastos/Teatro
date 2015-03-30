@@ -56,18 +56,12 @@
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
-    
+    [self chamarPeca:self.peca];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-}
-
-- (IBAction)VerPeca:(id)sender {
-    
-    [self chamarPeca];
     
 }
 

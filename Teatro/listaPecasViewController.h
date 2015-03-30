@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSON.h"
 
 @interface listaPecasViewController : UITableViewController
 
-//@property(nonatomic, strong) NSMutableArray *listaPecas;
+
 
 @end
