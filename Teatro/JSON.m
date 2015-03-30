@@ -68,14 +68,18 @@
             }
             
            //organiza o array em ordem de acordo com uma chave
+            
             NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"tituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
             
             NSArray *sortedArray = [self.listaPecas sortedArrayUsingDescriptors:@[sort]];
             
-            //tipos diferentes, tem que mudar de NSMutableArray para NSArray
-            //self.listaPecas = sortedArray;
+            NSMutableArray *mutableSortedArray = [sortedArray copy];
+
             
+            self.listaPecas = mutableSortedArray;
             
+            NSLog(@"%@",self.listaPecas);
+
            
 
             

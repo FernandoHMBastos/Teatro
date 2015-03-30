@@ -21,12 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //achar maneira de imprimir a lista de peças pra ver se está certa
     // Do any additional setup after loading the view, typically from a nib.
-    //JSON *j = [[JSON alloc] init];
-    // j = [JSON sortedArray];
-    
-    // NSLog(@"%@",j.listaPecas);
+   
+    JSON *j = [[JSON alloc] init];
+    NSLog(@"%@",j.listaPecas);
+    //valores de j estão nulos
 }
 
 
