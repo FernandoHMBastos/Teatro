@@ -10,7 +10,12 @@
 
 @interface listaTableViewCell : UITableViewCell
 
+///Labels e imagens da célula padrão
+@property (weak, nonatomic) IBOutlet UIImageView *imagem;
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
+@property (weak, nonatomic) IBOutlet UILabel *local;
+@property (weak, nonatomic) IBOutlet UIImageView *classificacaoIndicativa;
+@property (weak, nonatomic) IBOutlet UILabel *preco;
 
 
 @end
