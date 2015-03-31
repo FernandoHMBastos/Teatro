@@ -53,6 +53,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     //View para fazer algo quanto a "ABA" HELP aparecer.
     [super viewWillAppear:animated];
+    
+    //Cria a bglayer e chama a confirguração setada no BackgrundLayer.h
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
@@ -67,37 +69,23 @@
 
 -(void)chamarPeca:(Peca*)peca{
     
-    ///Aloca as duas classes para que seus valores sejam chamados e levados para as labels
-    //Pecas *peca = [[Pecas alloc] init];
-    
-    FichaTecnica *ficha = [peca ficha];
-    
     ///Passa os valores da classe PecasClasse para as labels
-    self.tituloPecaLabel.text = peca.TituloString;
-    self.horarioPecaLabel.text = peca.HorarioString;
-    self.faixaEtariaLabel.text = peca.FaixaEtariaString;
-    self.precoPecaLabel.text = peca.PrecoString;
-    self.localPecaLabel.text = peca.LocalString;
-    self.enderecoLabel.text = peca.EnderecoString;
-    self.generoPecaLabel.text = peca.GeneroString;
+    self.tituloPecaLabel.text = self.peca.TituloString;
+    self.horarioPecaLabel.text = self.peca.HorarioString;
+    self.faixaEtariaLabel.text = self.peca.FaixaEtariaString;
+    self.precoPecaLabel.text = self.peca.PrecoString;
+    self.localPecaLabel.text = self.peca.LocalString;
+    self.enderecoLabel.text = self.peca.EnderecoString;
+    self.generoPecaLabel.text = self.peca.GeneroString;
     
     ///Passa os valores da classe FichaTécnica para as labels
-    self.grupoLabel.text = ficha.GrupoString;
-    self.direcaoLabel.text = ficha.DirecaoString;
-    self.duracaoLabel.text = ficha.DuracaoString;
-    self.sinopseLabel.text = ficha.SinopseString;
-    self.elencoLabel.text = ficha.ElencoString;
-    self.contatoLabel.text = ficha.ContatoString;
+    self.grupoLabel.text = self.peca.ficha.GrupoString;
+    self.direcaoLabel.text = self.peca.ficha.DirecaoString;
+    self.duracaoLabel.text = self.peca.ficha.DuracaoString;
+    self.sinopseLabel.text = self.peca.ficha.SinopseString;
+    self.elencoLabel.text = self.peca.ficha.ElencoString;
+    self.contatoLabel.text = self.peca.ficha.ContatoString;
     
 }
-
-/*-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqual:@"ModeloPeca"]) {
-        [[segue destinationViewController] chamarPeca:pecaEscolhida];
-    }
-}*/
-
-
-
 
 @end

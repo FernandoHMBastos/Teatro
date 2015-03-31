@@ -12,13 +12,7 @@
 
 @interface PecaViewController : UIViewController
 
-/** Passa os dados da peça selecionada para os labels
- **/
-//-(void)chamarPeca;
-
+///Utiliza a classe Peca
 @property (nonatomic, strong) Peca *peca;
-@property (weak, nonatomic) IBOutlet UILabel *FichaTecnicaLabel;
-
-
 
 @end
