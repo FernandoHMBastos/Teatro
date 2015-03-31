@@ -79,6 +79,7 @@
     self.localPecaLabel.text = self.peca.LocalString;
     self.enderecoLabel.text = self.peca.EnderecoString;
     self.generoPecaLabel.text = self.peca.GeneroString;
+    self.imagemPeca.image = [UIImage imageNamed: self.peca.NomeImagem];
     
     ///Passa os valores da classe FichaTécnica para as labels
     self.grupoLabel.text = self.peca.ficha.GrupoString;

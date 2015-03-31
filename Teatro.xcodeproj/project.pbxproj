@@ -10,7 +10,6 @@
 		85D7FAD31AC3073300FA6EB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAD21AC3073300FA6EB6 /* main.m */; };
 		85D7FAD61AC3073300FA6EB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */; };
 		85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADA1AC3073300FA6EB6 /* Main.storyboard */; };
-		85D7FADE1AC3073300FA6EB6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADD1AC3073300FA6EB6 /* Images.xcassets */; };
 		85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */; };
 		85D7FAED1AC3073300FA6EB6 /* TeatroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */; };
 		DA5532D01AC46D94009CEB59 /* Peca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5532CF1AC46D94009CEB59 /* Peca.m */; };
@@ -21,6 +20,7 @@
 		FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */; };
 		FF36E2BF1AC5DB9800B9D147 /* listaPecasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF36E2BE1AC5DB9800B9D147 /* listaPecasViewController.m */; };
 		FF592BA41AC9DA4B00398F30 /* listaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */; };
+		FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF592BA51ACAD5B200398F30 /* Images.xcassets */; };
 		FF95F0E61AC5A545000D296E /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0E51AC5A545000D296E /* JSON.m */; };
 		FFB52B9F1AC48ACC00261776 /* FichaTecnica.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB52B9E1AC48ACC00261776 /* FichaTecnica.m */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		85D7FADB1AC3073300FA6EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		85D7FADD1AC3073300FA6EB6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		85D7FAE01AC3073300FA6EB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		85D7FAE61AC3073300FA6EB6 /* TeatroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7FAEB1AC3073300FA6EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		FF36E2BE1AC5DB9800B9D147 /* listaPecasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listaPecasViewController.m; sourceTree = "<group>"; };
 		FF592BA21AC9DA4B00398F30 /* listaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listaTableViewCell.h; sourceTree = "<group>"; };
 		FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listaTableViewCell.m; sourceTree = "<group>"; };
+		FF592BA51ACAD5B200398F30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF95F0E41AC5A545000D296E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		FF95F0E51AC5A545000D296E /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		FFB52B9D1AC48ACC00261776 /* FichaTecnica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaTecnica.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				DAA2FA851AC339E9006E34EE /* PecaViewController.m */,
 				FF36E2BD1AC5DB9800B9D147 /* listaPecasViewController.h */,
 				FF36E2BE1AC5DB9800B9D147 /* listaPecasViewController.m */,
-				85D7FADD1AC3073300FA6EB6 /* Images.xcassets */,
+				FF592BA51ACAD5B200398F30 /* Images.xcassets */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				DA5532CA1AC46D11009CEB59 /* Classes */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
@@ -251,8 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */,
+				FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */,
 				85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */,
-				85D7FADE1AC3073300FA6EB6 /* Images.xcassets in Resources */,
 				FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

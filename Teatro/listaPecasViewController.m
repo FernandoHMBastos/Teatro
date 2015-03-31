@@ -62,6 +62,8 @@
     cell.titulo.text = peca.TituloString;
     cell.local.text = peca.LocalString;
     cell.preco.text = peca.PrecoString;
+    cell.imagem.image = [UIImage imageNamed: peca.NomeImagem];
+    cell.classificacaoIndicativa.image = [UIImage imageNamed: peca.FaixaEtariaString];
     
     return cell;
 }
