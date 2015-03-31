@@ -159,6 +159,15 @@
     } else {
         [self listaCompleta];
     }
+    //Começando a implementação da busca por data
+    /*
+    Peca *pe = [[Peca alloc]init];
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd//mm/yy"];
+    NSDate *date = [dateFormat dateFromString:pe.DataString];
+    [dateFormat release];
+     */
     
     [self.tableView reloadData];
 }
