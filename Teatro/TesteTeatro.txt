@@ -85,6 +85,23 @@
 "Endereco" : "Rua da Desistência",
 "Genero" : "Teatro Acomodado",
 "Imagem" : "Peca5.jpg"
+},
+{
+"Titulo" : "Último Teste",
+"Grupo" : "Os que voltaram",
+"Direcao" : "Alguns",
+"Data" : "10/04",
+"Horario" : "18:00",
+"Duracao" : "0:20",
+"Faixa Etaria" : "10.jpg",
+"Preco" : "R$15,00",
+"Sinopse" : "Não gostaram e voltaram",
+"Elenco" : "Os que voltarm",
+"Local" : "Outro Veículo",
+"Contato" : "vamovolta@gmail.com",
+"Endereco" : "Rua da Desistência",
+"Genero" : "Teatro Acomodado",
+"Imagem" : "Peca5.jpg"
 }
 ]
 }

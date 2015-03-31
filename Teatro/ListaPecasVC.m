@@ -1,33 +1,44 @@
 //
-//  listaPecasViewController.m
+//  ListaPecasVC.m
 //  Teatro
 //
-//  Created by Vítor Machado Rocha on 27/03/15.
+//  Created by Vítor Machado Rocha on 31/03/15.
 //  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
 //
 
-#import "listaPecasViewController.h"
+#import "ListaPecasVC.h"
 #import "listaTableViewCell.h"
 #import "Peca.h"
 #import "PecaViewController.h"
 #import "BackgroundLayer.h"
+#import "JSON.h"
 
-@interface listaPecasViewController ()
+@interface ListaPecasVC()
 
-///Recebe a lista
 @property(nonatomic, strong) NSMutableArray *lista;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation listaPecasViewController
+@implementation ListaPecasVC
 
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     ///Chama a mutable array do json e passa os dados para a lista daqui
-     JSON *lista = [[JSON alloc] init];
+    JSON *lista = [[JSON alloc] init];
     [lista json];
     self.lista = lista.listaPecas;
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+
     
 }
 
@@ -40,13 +51,13 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Potentially incomplete method implementation.
+    //#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete method implementation.
+    //#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [[self lista] count];
 }
@@ -81,38 +92,39 @@
 
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
 
 
 #pragma mark - Navigation
@@ -128,7 +140,7 @@
         
         //Cria a Peca peca e fala que o index dela vai ser o da linha clicada
         Peca *peca = self.lista[indexPath.row];
-
+        
         //Contacta a PecaViewCOntroller de que a peca a ser mostrada no tela chamada pelo segue escolhido é a peca com o index da linha clicada
         PecaViewController *pecaViewController = [segue destinationViewController];
         pecaViewController.peca = peca;
