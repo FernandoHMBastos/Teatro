@@ -1,57 +1,52 @@
 //
-//  HomeViewController.m
+//  DestaquesVC.m
 //  Teatro
 //
-//  Created by Gabarron on 25/03/15.
+//  Created by Gabarron on 31/03/15.
 //  Copyright (c) 2015 Fernando H M Bastos. All rights reserved.
 //
 
-#import "HomeViewController.h"
-#import "BackgroundLayer.h"
+#import "DestaquesVC.h"
 #import "listaTableViewCell.h"
 #import "Peca.h"
 #import "PecaViewController.h"
 #import "BackgroundLayer.h"
 #import "JSON.h"
-#import "Destaques.h"
 
-@interface HomeViewController ()
+@interface DestaquesVC ()
 
 @property(nonatomic, strong) NSMutableArray *lista;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation HomeViewController
+@implementation DestaquesVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    Destaques *lista = [[Destaques alloc] init];
-    [lista destaques];
+    JSON *lista = [[JSON alloc] init];
+    [lista json];
     self.lista = lista.listaPecas;
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    
 }
-
-
-- (void)viewWillAppear:(BOOL)animated {
-    //View para fazer algo quanto a "ABA" HELP aparecer.
-    [super viewWillAppear:animated];
-    
-    //Cria a bglayer e chama a confirguração setada no BackgrundLayer.h
-    CAGradientLayer *bgLayer = [BackgroundLayer greenGradient];
-    bgLayer.frame = self.view.bounds;
-    [self.view.layer insertSublayer:bgLayer atIndex:0];
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //#warning Potentially incomplete method implementation.
@@ -84,7 +79,7 @@
     
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     if (indexPath.row%2 == 0) {
-        cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(80/255.0)  blue:(90/255.0)  alpha:1.0];
+        cell.backgroundColor = [UIColor colorWithRed:(20/255.0)  green:(80/255.0)  blue:(190/255.0)  alpha:1.0];
     }
     else {
         cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0];
@@ -136,7 +131,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     //Pergunta se o segue chamado é o Detail (vai ser porque a gente falou pra ser no listaTableViewCell)
-    if ([segue.identifier isEqualToString:@"Destaques"]) {
+    if ([segue.identifier isEqualToString:@"Detail"]) {
         
         //Cria uma váriavel indexPath que pega qual linha foi clicada, identificando o objeto escolhido.
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
@@ -149,7 +144,6 @@
         pecaViewController.peca = peca;
     }
 }
-
 
 
 @end
