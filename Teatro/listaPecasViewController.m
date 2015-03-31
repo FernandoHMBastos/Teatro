@@ -53,8 +53,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"cell";
+    
+    //Cria uma cell com as características que a gente deu no listaTableViewCell com o Identifier que demos pra ela
     listaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    //Define o título da peça de acordo com cada objeto da lista de peças
     Peca *peca = self.lista[indexPath.row];
     cell.titulo.text = peca.TituloString;
     
@@ -101,16 +104,20 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    //Pergunta se o segue chamado é o Detail (vai ser porque a gente falou pra ser no listaTableViewCell)
     if ([segue.identifier isEqualToString:@"Detail"]) {
+        
+        //Cria uma váriavel indexPath que pega qual linha foi clicada, identificando o objeto escolhido.
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
+        //Cria a Peca peca e fala que o index dela vai ser o da linha clicada
         Peca *peca = self.lista[indexPath.row];
 
+        //Contacta a PecaViewCOntroller de que a peca a ser mostrada no tela chamada pelo segue escolhido é a peca com o index da linha clicada
         PecaViewController *pecaViewController = [segue destinationViewController];
         pecaViewController.peca = peca;
     }
-    
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 @end

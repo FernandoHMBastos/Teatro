@@ -20,12 +20,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    //View para fazer algo quanto a "ABA" HELP aparecer.
+    [super viewWillAppear:animated];
+    
+    //Cria a bglayer e chama a confirguração setada no BackgrundLayer.h
     CAGradientLayer *bgLayer = [BackgroundLayer yellowGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
-    
-    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

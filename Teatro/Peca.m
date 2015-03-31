@@ -15,6 +15,7 @@
 
 @implementation Peca
 
+///Inicia a Ficha Tecnica
 -(instancetype)init
 {
     self = [super init];

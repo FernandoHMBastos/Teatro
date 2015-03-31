@@ -14,7 +14,7 @@
 
 
 
-@interface PecaViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface PecaViewController () <UITableViewDelegate>
 
 ///Labels da view de cada peça (as que tem "Peca"no nome são para não serem duplicadas, pois na view de lista de peças já existe o campo
 @property (weak, nonatomic) IBOutlet UIImageView *imagemPeca;
@@ -31,10 +31,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contatoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *enderecoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *generoPecaLabel;
-@property (weak, nonatomic) IBOutlet UITableView *listaPecas;
 
-///Labels da view de lista de peças
-@property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
 
 @end
 
@@ -45,9 +42,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Inicia a classe JSON e chama a função que carrega as peças do txt
     JSON *json = [[JSON alloc] init];
     [json json];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,6 +56,8 @@
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
+    
+    //Chama o método que define as informações a serem mostradas, a partir do que o segue trouxe de informação da peça clicada
     [self chamarPeca:self.peca];
 }
 
@@ -85,7 +85,6 @@
     self.sinopseLabel.text = self.peca.ficha.SinopseString;
     self.elencoLabel.text = self.peca.ficha.ElencoString;
     self.contatoLabel.text = self.peca.ficha.ContatoString;
-    
 }
 
 @end

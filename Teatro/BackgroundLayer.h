@@ -11,7 +11,7 @@
 
 @interface BackgroundLayer : NSObject
 
-///Blue gradient background
+///Cria os blackgrouns
 +(CAGradientLayer*) blueGradient;
 +(CAGradientLayer*) yellowGradient;
 +(CAGradientLayer*) greenGradient;

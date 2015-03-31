@@ -85,15 +85,9 @@
             NSArray *sortedArray = [self.listaPecas sortedArrayUsingDescriptors:@[sort]];
             
             self.mutableSortedArray = [sortedArray copy];
-
             
             self.listaPecas = self.mutableSortedArray;
-            
-            NSLog(@"%@", self.listaPecas);
-
-           
-
-            
+               
         }
     }
 }
