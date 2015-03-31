@@ -58,7 +58,7 @@
     //Cria uma cell com as características que a gente deu no listaTableViewCell com o Identifier que demos pra ela
     listaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    //Define o título da peça de acordo com cada objeto da lista de peças
+    //Define o título, local, preço, imagem, classificação indicadiva, horário e data da peça de acordo com cada objeto da lista de peças
     Peca *peca = self.lista[indexPath.row];
     cell.titulo.text = peca.TituloString;
     cell.local.text = peca.LocalString;
@@ -66,6 +66,7 @@
     cell.imagem.image = [UIImage imageNamed: peca.NomeImagem];
     cell.classificacaoIndicativa.image = [UIImage imageNamed: peca.FaixaEtariaString];
     cell.data.text = peca.DataString;
+    cell.horario.text = peca.HorarioString;
     
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     /*if (indexPath%2 == 0) {

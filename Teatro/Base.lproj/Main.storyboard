@@ -43,7 +43,7 @@
                                                 <rect key="frame" x="8" y="8" width="75" height="100"/>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNx-rZ-o8F">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNx-rZ-o8F">
                                             <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,6 +67,15 @@
                                                 <rect key="frame" x="91" y="41" width="60" height="20"/>
                                             </variation>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-Xi-LML">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="91" y="59" width="60" height="21"/>
+                                            </variation>
+                                        </label>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
@@ -76,6 +85,7 @@
                                             <exclude reference="SNx-rZ-o8F"/>
                                             <exclude reference="KPj-R8-XRT"/>
                                             <exclude reference="ark-do-qPM"/>
+                                            <exclude reference="zPt-Xi-LML"/>
                                         </mask>
                                     </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
@@ -86,12 +96,14 @@
                                             <include reference="SNx-rZ-o8F"/>
                                             <include reference="KPj-R8-XRT"/>
                                             <include reference="ark-do-qPM"/>
+                                            <include reference="zPt-Xi-LML"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="classificacaoIndicativa" destination="KPj-R8-XRT" id="2iS-X1-5c6"/>
                                     <outlet property="data" destination="ark-do-qPM" id="s22-lV-6kb"/>
+                                    <outlet property="horario" destination="zPt-Xi-LML" id="VVU-uE-Pha"/>
                                     <outlet property="imagem" destination="wUA-vG-a8s" id="qnP-TR-KKp"/>
                                     <outlet property="local" destination="q7S-xG-QEh" id="aGt-jR-JrW"/>
                                     <outlet property="preco" destination="SNx-rZ-o8F" id="QYB-e7-82s"/>
@@ -163,7 +175,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="128" width="155" height="21"/>
+                                    <rect key="frame" x="204" y="110" width="155" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direção" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6al-PB-NXa">
@@ -173,7 +185,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="157" width="154" height="21"/>
+                                    <rect key="frame" x="205" y="139" width="154" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elenco" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMY-RF-ZBU">
@@ -206,26 +218,6 @@
                                     <rect key="frame" x="16" y="586" width="347" height="21"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sa-ym-jdh">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="295" width="40" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMz-AR-YLb">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="258" y="295" width="101" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1O-rz-LYW">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -253,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="264" width="133" height="21"/>
+                                    <rect key="frame" x="205" y="232" width="133" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taE-DZ-GtB">
@@ -263,7 +255,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="205" y="195" width="154" height="21"/>
+                                    <rect key="frame" x="291" y="168" width="68" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duração" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jel-D7-sEI">
@@ -273,7 +265,33 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="204" y="224" width="155" height="21"/>
+                                    <rect key="frame" x="204" y="203" width="72" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asv-Y5-cUA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="205" y="168" width="57" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UhG-ZO-npA">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="205" y="274" width="72" height="42"/>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMz-AR-YLb">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.97344380959999999" blue="0.65939719539999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="291" y="284" width="68" height="21"/>
                                 </variation>
                             </label>
                         </subviews>
@@ -287,13 +305,14 @@
                                 <exclude reference="SMY-RF-ZBU"/>
                                 <exclude reference="mLE-S5-Jhk"/>
                                 <exclude reference="Yjb-Kr-HW7"/>
-                                <exclude reference="3sa-ym-jdh"/>
-                                <exclude reference="zMz-AR-YLb"/>
                                 <exclude reference="l1O-rz-LYW"/>
                                 <exclude reference="mSh-FW-rEE"/>
                                 <exclude reference="qTp-9x-XVR"/>
                                 <exclude reference="taE-DZ-GtB"/>
                                 <exclude reference="Jel-D7-sEI"/>
+                                <exclude reference="Asv-Y5-cUA"/>
+                                <exclude reference="UhG-ZO-npA"/>
+                                <exclude reference="zMz-AR-YLb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -305,25 +324,27 @@
                                 <include reference="SMY-RF-ZBU"/>
                                 <include reference="mLE-S5-Jhk"/>
                                 <include reference="Yjb-Kr-HW7"/>
-                                <include reference="3sa-ym-jdh"/>
-                                <include reference="zMz-AR-YLb"/>
                                 <include reference="l1O-rz-LYW"/>
                                 <include reference="mSh-FW-rEE"/>
                                 <include reference="qTp-9x-XVR"/>
                                 <include reference="taE-DZ-GtB"/>
                                 <include reference="Jel-D7-sEI"/>
+                                <include reference="Asv-Y5-cUA"/>
+                                <include reference="UhG-ZO-npA"/>
+                                <include reference="zMz-AR-YLb"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Peça" id="aw8-au-HdU"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="classificacaoIndicativa" destination="UhG-ZO-npA" id="NbU-sV-Cm3"/>
                         <outlet property="contatoLabel" destination="l1O-rz-LYW" id="tgF-Ce-Con"/>
+                        <outlet property="data" destination="Asv-Y5-cUA" id="eDF-vI-6aB"/>
                         <outlet property="direcaoLabel" destination="6al-PB-NXa" id="8v4-8D-s9I"/>
                         <outlet property="duracaoLabel" destination="Jel-D7-sEI" id="nLW-HH-q8r"/>
                         <outlet property="elencoLabel" destination="SMY-RF-ZBU" id="6mS-PX-SqJ"/>
                         <outlet property="enderecoLabel" destination="Yjb-Kr-HW7" id="tL8-X5-tU1"/>
-                        <outlet property="faixaEtariaLabel" destination="3sa-ym-jdh" id="tJ5-to-eDM"/>
                         <outlet property="generoPecaLabel" destination="qTp-9x-XVR" id="wOm-C1-WuK"/>
                         <outlet property="grupoLabel" destination="SbW-6a-m3r" id="p2B-Ge-nrw"/>
                         <outlet property="horarioPecaLabel" destination="taE-DZ-GtB" id="GaN-AM-ETI"/>

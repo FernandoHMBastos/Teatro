@@ -18,13 +18,13 @@
 
 ///Labels da view de cada peça (as que tem "Peca"no nome são para não serem duplicadas, pois na view de lista de peças já existe o campo
 @property (weak, nonatomic) IBOutlet UIImageView *imagemPeca;
+@property (weak, nonatomic) IBOutlet UIImageView *classificacaoIndicativa;
 @property (weak, nonatomic) IBOutlet UILabel *tituloPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *grupoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *direcaoLabel;
-//data
+@property (weak, nonatomic) IBOutlet UILabel *data;
 @property (weak, nonatomic) IBOutlet UILabel *horarioPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *duracaoLabel;
-@property (weak, nonatomic) IBOutlet UILabel *faixaEtariaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *precoPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *sinopseLabel;
 @property (weak, nonatomic) IBOutlet UILabel *elencoLabel;
@@ -75,8 +75,9 @@
     
     ///Passa os valores da classe PecasClasse para as labels
     self.tituloPecaLabel.text = self.peca.TituloString;
+    self.data.text = self.peca.DataString;
     self.horarioPecaLabel.text = self.peca.HorarioString;
-    self.faixaEtariaLabel.text = self.peca.FaixaEtariaString;
+    self.classificacaoIndicativa.image = [UIImage imageNamed: self.peca.FaixaEtariaString];
     self.precoPecaLabel.text = self.peca.PrecoString;
     self.localPecaLabel.text = self.peca.LocalString;
     self.enderecoLabel.text = self.peca.EnderecoString;
