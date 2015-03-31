@@ -10,6 +10,7 @@
 #import "listaTableViewCell.h"
 #import "Peca.h"
 #import "PecaViewController.h"
+#import "BackgroundLayer.h"
 
 @interface listaPecasViewController ()
 
@@ -64,6 +65,15 @@
     cell.preco.text = peca.PrecoString;
     cell.imagem.image = [UIImage imageNamed: peca.NomeImagem];
     cell.classificacaoIndicativa.image = [UIImage imageNamed: peca.FaixaEtariaString];
+    cell.data.text = peca.DataString;
+    
+    //Falta criar a váriavel que vai pegar o inteiro de indexPath
+    /*if (indexPath%2 == 0) {
+        cell.backgroundColor = [UIColor colorWithRed:(20/255.0)  green:(80/255.0)  blue:(190/255.0)  alpha:1.0];
+    }
+    else {
+        cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0];
+    }*/
     
     return cell;
 }

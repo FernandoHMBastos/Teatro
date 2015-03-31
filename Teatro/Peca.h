@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSString* GeneroString;
 @property (nonatomic, strong) NSString* LocalString;
 @property (nonatomic, strong) NSString* EnderecoString;
+@property (nonatomic, strong) NSString* DataString;
 @property (nonatomic, strong) NSString* HorarioString;
 @property (nonatomic, strong) NSString* NomeImagem;
 @property (nonatomic, strong) FichaTecnica* ficha;

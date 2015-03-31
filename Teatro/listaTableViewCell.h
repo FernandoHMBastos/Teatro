@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *local;
 @property (weak, nonatomic) IBOutlet UIImageView *classificacaoIndicativa;
 @property (weak, nonatomic) IBOutlet UILabel *preco;
+@property (weak, nonatomic) IBOutlet UILabel *data;
 
 
 @end

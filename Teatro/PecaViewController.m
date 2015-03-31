@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *tituloPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *grupoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *direcaoLabel;
+//data
 @property (weak, nonatomic) IBOutlet UILabel *horarioPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *duracaoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *faixaEtariaLabel;
@@ -31,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contatoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *enderecoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *generoPecaLabel;
+
 
 
 @end

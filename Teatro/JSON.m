@@ -65,6 +65,7 @@
                 [p setTituloString:[pecaDict objectForKey:@ "Titulo"] ];
                 [[p ficha] setGrupoString:[pecaDict objectForKey:@ "Grupo"] ];
                 [[p ficha ]setDirecaoString:[pecaDict objectForKey:@ "Direcao"] ];
+                [p setDataString:[pecaDict objectForKey:@ "Data"] ];
                 [p setHorarioString:[pecaDict objectForKey:@ "Horario"] ];
                 [[p ficha]setDuracaoString:[pecaDict objectForKey:@ "Duracao"] ];
                 [p setFaixaEtariaString:[pecaDict objectForKey:@ "Faixa Etaria"] ];
