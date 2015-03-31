@@ -29,6 +29,8 @@
     return self;
 }
 
+#pragma mark - Métodos
+
 -(void) json
 {
     

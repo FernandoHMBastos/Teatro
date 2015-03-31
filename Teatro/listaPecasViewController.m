@@ -60,6 +60,8 @@
     //Define o título da peça de acordo com cada objeto da lista de peças
     Peca *peca = self.lista[indexPath.row];
     cell.titulo.text = peca.TituloString;
+    cell.local.text = peca.LocalString;
+    cell.preco.text = peca.PrecoString;
     
     return cell;
 }

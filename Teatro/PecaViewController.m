@@ -67,6 +67,8 @@
     
 }
 
+#pragma mark - Métodos
+
 -(void)chamarPeca:(Peca*)peca{
     
     ///Passa os valores da classe PecasClasse para as labels
