@@ -18,9 +18,17 @@
 @property(nonatomic, strong) NSMutableArray *lista;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+
 @end
 
 @implementation ListaPecasVC
+
+- (void)listaCompleta {
+    ///Chama a mutable array do json e passa os dados para a lista daqui
+    JSON *lista = [[JSON alloc] init];
+    [lista json];
+    self.lista = lista.listaPecas;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -32,10 +40,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    ///Chama a mutable array do json e passa os dados para a lista daqui
-    JSON *lista = [[JSON alloc] init];
-    [lista json];
-    self.lista = lista.listaPecas;
+    [self listaCompleta];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
 
@@ -146,5 +151,17 @@
         pecaViewController.peca = peca;
     }
 }
+
+- (IBAction)Gratuito:(UISwitch *)sender {
+    if ([sender isOn]) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
+        self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+    } else {
+        [self listaCompleta];
+    }
+    
+    [self.tableView reloadData];
+}
+
 
 @end
