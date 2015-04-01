@@ -119,7 +119,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="8" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 </variation>
                             </tableView>
                         </subviews>
@@ -142,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpg-wC-Xcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="810.75" y="692.625"/>
+            <point key="canvasLocation" x="767.25" y="682.875"/>
         </scene>
         <!--Peças-->
         <scene sceneID="26p-NL-apm">
