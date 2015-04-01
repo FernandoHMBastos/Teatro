@@ -14,6 +14,4 @@
 @property (weak, nonatomic) IBOutlet UISwitch *buscaData;
 @property (weak, nonatomic) IBOutlet UISwitch *Gratuito;
 
-
-
 @end
