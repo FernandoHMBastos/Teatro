@@ -10,4 +10,10 @@
 
 @interface ListaPecasVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UISwitch *buscaData;
+@property (weak, nonatomic) IBOutlet UISwitch *Gratuito;
+
+
+
 @end

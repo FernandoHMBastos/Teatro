@@ -17,11 +17,12 @@
 
 @property(nonatomic, strong) NSMutableArray *lista;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property(nonatomic, strong) NSString *strDate;
 
 @end
 
 @implementation ListaPecasVC
+
 
 - (void)listaCompleta {
     ///Chama a mutable array do json e passa os dados para a lista daqui
@@ -39,7 +40,7 @@
 */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.datePicker.hidden = YES;
     [self listaCompleta];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
@@ -153,24 +154,105 @@
 }
 
 - (IBAction)Gratuito:(UISwitch *)sender {
+
     if ([sender isOn]) {
+        
+        if([self.buscaData isOn]){
+            
+            [self listaCompleta];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate, @"SELF.PrecoString == %@", @"Gratuito"];
+            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+            
+        }else{
+            
+        [self listaCompleta];
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
         self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+        }
     } else {
-        [self listaCompleta];
+        
+        if([self.buscaData isOn]){
+            
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
+            [self listaCompleta];
+            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+            
+        }else{
+            [self listaCompleta];}
     }
-    //Começando a implementação da busca por data
-    /*
-    Peca *pe = [[Peca alloc]init];
-    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd//mm/yy"];
-    NSDate *date = [dateFormat dateFromString:pe.DataString];
-    [dateFormat release];
-     */
     
     [self.tableView reloadData];
+    
 }
+
+
+- (IBAction)datePicker:(id)sender {
+
+    UIDatePicker* datePicker = (UIDatePicker*)sender;
+    NSDate *selectedDate = [datePicker date];
+
+    
+  [self filterByDate:selectedDate];
+    
+}
+
+-(void)filterByDate:(NSDate*)date {
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd-MM-yyyy"];
+  //  NSString* strDate = [dateFormat stringFromDate:date];
+    
+    
+        if([self.Gratuito isOn]){
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate, @"SELF.PrecoString == %@", @"Gratuito"];
+    [self listaCompleta];
+    self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+            
+        }else{
+            
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
+            [self listaCompleta];
+            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+            
+        }
+    
+    [self.tableView reloadData];
+    
+}
+
+- (IBAction)buscaData:(UISwitch *)sender {
+    
+    if([sender isOn]) {
+        if([self.Gratuito isOn]){
+       
+        self.datePicker.hidden = NO;
+            [self datePicker];
+            
+        }else{
+            
+            self.datePicker.hidden = NO;
+            [self datePicker];
+            
+        }
+        
+    }else{
+        if([self.Gratuito isOn]){
+        
+        self.datePicker.hidden = YES;
+        [self Gratuito];
+            
+            
+        }else{
+        
+            [self listaCompleta];
+            
+        }
+        
+    }
+    [self.tableView reloadData];
+}
+
 
 
 @end
