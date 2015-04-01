@@ -28,7 +28,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratuito?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-AF-UQv">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="236" y="89" width="72" height="21"/>
@@ -176,7 +176,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="b68-S9-qUS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -396,7 +396,7 @@
             </objects>
             <point key="canvasLocation" x="1604.25" y="682.875"/>
         </scene>
-        <!--Destaque-->
+        <!--Destaques-->
         <scene sceneID="epB-Jg-dIK">
             <objects>
                 <viewController id="kqp-Y2-AG2" customClass="HomeViewController" sceneMemberID="viewController">
@@ -440,7 +440,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Início" id="ykr-5I-oyQ"/>
-                    <navigationItem key="navigationItem" title="Destaque" id="8D1-3V-S6V"/>
+                    <navigationItem key="navigationItem" title="Destaques" id="8D1-3V-S6V"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="Gpn-yM-uk0" id="3w5-Gb-xKt"/>
@@ -459,7 +459,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pwC-An-gMt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -482,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="39d-cn-JaM" kind="relationship" relationship="viewControllers" id="0aW-Bc-eJP"/>
@@ -577,7 +577,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uz6-57-HgI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
@@ -595,6 +595,6 @@
         <image name="help_page_sign" width="980" height="980"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bMa-Ek-UDr"/>
+        <segue reference="VA6-lP-05a"/>
     </inferredMetricsTieBreakers>
 </document>
