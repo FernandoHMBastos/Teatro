@@ -22,11 +22,11 @@
     if (self) {
         // Initialization code
         
-        self.contentView.backgroundColor = [UIColor whiteColor];
+        self.contentView.backgroundColor = [UIColor blackColor];
         
         self.parallaxImage = [UIImageView new];
         [self.contentView addSubview:self.parallaxImage];
-        self.parallaxImage.backgroundColor = [UIColor whiteColor];
+        self.parallaxImage.backgroundColor = [UIColor blackColor];
         self.parallaxImage.contentMode = UIViewContentModeScaleAspectFill;
         self.clipsToBounds = YES;
         
