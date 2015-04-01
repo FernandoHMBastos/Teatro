@@ -1,0 +1,22 @@
+{
+
+"Destaques": [
+{
+"Titulo" : "A Pequena Sereia",
+"Grupo" : "Instrutores do BEPiD",
+"Direcao" : "Raquel",
+"Data" : "05/04",
+"Horario" : "08:00",
+"Duracao" : "2:00",
+"Faixa Etaria" : "18.jpg",
+"Preco" : "Gratuito",
+"Sinopse" : "Musical com dança baseada no filme A Pequena Sereia",
+"Elenco" : "Augusto, Reina, Guga e Sérgio",
+"Local" : "Instituto Eldorado",
+"Contato" : "bepid@bepid.com",
+"Endereco" : "Av. Alan Turing, 275",
+"Genero" : "Comédia",
+"Imagem" : "Destaque.png"
+}
+]
+}

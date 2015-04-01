@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QQ2-iZ-oyM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QQ2-iZ-oyM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -13,8 +13,27 @@
                         <viewControllerLayoutGuide type="bottom" id="BK1-fC-EbY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ff5-sb-Oqs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cea-9K-TDi">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="316" y="84" width="51" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="Gratuito:" destination="qXf-SY-3ze" eventType="valueChanged" id="L5w-b1-X1i"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratuito?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKK-AF-UQv">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="236" y="89" width="72" height="21"/>
+                                </variation>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="od5-AQ-hxO">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,12 +77,6 @@
                                                         <rect key="frame" x="295" y="41" width="72" height="21"/>
                                                     </variation>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-FK-aGs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="295" y="70" width="72" height="42"/>
-                                                    </variation>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph5-V8-Ymp">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -82,6 +95,12 @@
                                                         <rect key="frame" x="91" y="59" width="60" height="21"/>
                                                     </variation>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-FK-aGs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="295" y="70" width="72" height="42"/>
+                                                    </variation>
+                                                </imageView>
                                             </subviews>
                                             <variation key="default">
                                                 <mask key="subviews">
@@ -89,9 +108,9 @@
                                                     <exclude reference="ckL-dc-Lmh"/>
                                                     <exclude reference="pSp-NK-oRW"/>
                                                     <exclude reference="kaX-ME-8yY"/>
-                                                    <exclude reference="6hB-FK-aGs"/>
                                                     <exclude reference="ph5-V8-Ymp"/>
                                                     <exclude reference="jjy-kP-x8w"/>
+                                                    <exclude reference="6hB-FK-aGs"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -100,9 +119,9 @@
                                                     <include reference="ckL-dc-Lmh"/>
                                                     <include reference="pSp-NK-oRW"/>
                                                     <include reference="kaX-ME-8yY"/>
-                                                    <include reference="6hB-FK-aGs"/>
                                                     <include reference="ph5-V8-Ymp"/>
                                                     <include reference="jjy-kP-x8w"/>
+                                                    <include reference="6hB-FK-aGs"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -119,18 +138,22 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="123" width="375" height="641"/>
                                 </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="Cea-9K-TDi"/>
+                                <exclude reference="nKK-AF-UQv"/>
                                 <exclude reference="od5-AQ-hxO"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="Cea-9K-TDi"/>
+                                <include reference="nKK-AF-UQv"/>
                                 <include reference="od5-AQ-hxO"/>
                             </mask>
                         </variation>
@@ -142,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpg-wC-Xcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767.25" y="682.875"/>
+            <point key="canvasLocation" x="819.75" y="682.875"/>
         </scene>
         <!--Peças-->
         <scene sceneID="26p-NL-apm">
@@ -369,7 +392,7 @@
             </objects>
             <point key="canvasLocation" x="1604.25" y="682.875"/>
         </scene>
-        <!--Início-->
+        <!--Destaque-->
         <scene sceneID="epB-Jg-dIK">
             <objects>
                 <viewController id="kqp-Y2-AG2" customClass="HomeViewController" sceneMemberID="viewController">
@@ -381,34 +404,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destaques !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eg-oc-bis">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="534" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gpn-yM-uk0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="534" id="Z4f-OA-SJI" customClass="listaTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z4f-OA-SJI" id="gkD-oI-DfD">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYU-qx-xAI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="8" y="478" width="72" height="42"/>
+                                                    </variation>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qFP-in-lpM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="-8" y="-19" width="391" height="604"/>
+                                                    </variation>
+                                                </imageView>
+                                            </subviews>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="eYU-qx-xAI"/>
+                                                    <exclude reference="qFP-in-lpM"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="eYU-qx-xAI"/>
+                                                    <include reference="qFP-in-lpM"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="classificacaoIndicativa" destination="eYU-qx-xAI" id="Weg-a5-mbY"/>
+                                            <outlet property="imagem" destination="qFP-in-lpM" id="A3I-yE-GNI"/>
+                                            <segue destination="U3P-ct-rgn" kind="show" identifier="Destaques" id="229-u3-xdk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="64" width="208" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="773"/>
                                 </variation>
-                            </label>
+                            </tableView>
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="1eg-oc-bis"/>
+                                <exclude reference="Gpn-yM-uk0"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="1eg-oc-bis"/>
+                                <include reference="Gpn-yM-uk0"/>
                             </mask>
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Início" id="ykr-5I-oyQ"/>
-                    <navigationItem key="navigationItem" title="Início" id="8D1-3V-S6V"/>
+                    <navigationItem key="navigationItem" title="Destaque" id="8D1-3V-S6V"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="Gpn-yM-uk0" id="3w5-Gb-xKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5od-XR-x3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767.25" y="-88.875"/>
+            <point key="canvasLocation" x="749.25" y="-88.875"/>
         </scene>
         <!--Início-->
         <scene sceneID="410-bJ-XI8">
@@ -545,4 +609,7 @@
     <resources>
         <image name="help_page_sign" width="980" height="980"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bMa-Ek-UDr"/>
+    </inferredMetricsTieBreakers>
 </document>

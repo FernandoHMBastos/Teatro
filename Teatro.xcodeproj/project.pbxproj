@@ -12,6 +12,8 @@
 		85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADA1AC3073300FA6EB6 /* Main.storyboard */; };
 		85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */; };
 		85D7FAED1AC3073300FA6EB6 /* TeatroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */; };
+		DA34AE311ACB1D0D0070439A /* Destaques.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA34AE301ACB1D0D0070439A /* Destaques.txt */; };
+		DA34AE371ACB233C0070439A /* Destaques.m in Sources */ = {isa = PBXBuildFile; fileRef = DA34AE361ACB233C0070439A /* Destaques.m */; };
 		DA5532D01AC46D94009CEB59 /* Peca.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5532CF1AC46D94009CEB59 /* Peca.m */; };
 		DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA821AC339CB006E34EE /* HomeViewController.m */; };
 		DAA2FA861AC339E9006E34EE /* PecaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA851AC339E9006E34EE /* PecaViewController.m */; };
@@ -46,6 +48,9 @@
 		85D7FAE61AC3073300FA6EB6 /* TeatroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeatroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D7FAEB1AC3073300FA6EB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D7FAEC1AC3073300FA6EB6 /* TeatroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeatroTests.m; sourceTree = "<group>"; };
+		DA34AE301ACB1D0D0070439A /* Destaques.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Destaques.txt; sourceTree = "<group>"; };
+		DA34AE351ACB233C0070439A /* Destaques.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Destaques.h; sourceTree = "<group>"; };
+		DA34AE361ACB233C0070439A /* Destaques.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Destaques.m; sourceTree = "<group>"; };
 		DA5532CE1AC46D94009CEB59 /* Peca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peca.h; sourceTree = "<group>"; };
 		DA5532CF1AC46D94009CEB59 /* Peca.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Peca.m; sourceTree = "<group>"; };
 		DAA2FA811AC339CB006E34EE /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */,
+				DA34AE301ACB1D0D0070439A /* Destaques.txt */,
 				85D7FAD41AC3073300FA6EB6 /* AppDelegate.h */,
 				85D7FAD51AC3073300FA6EB6 /* AppDelegate.m */,
 				85D7FADA1AC3073300FA6EB6 /* Main.storyboard */,
@@ -115,6 +121,8 @@
 				DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */,
 				DAA2FA811AC339CB006E34EE /* HomeViewController.h */,
 				DAA2FA821AC339CB006E34EE /* HomeViewController.m */,
+				FF78CA5E1ACB040D00E51991 /* ListaPecasVC.h */,
+				FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */,
 				FF09B0701AC46676007E21A4 /* BackgroundLayer.h */,
 				FF09B0711AC46676007E21A4 /* BackgroundLayer.m */,
 				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
@@ -123,8 +131,6 @@
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				DA5532CA1AC46D11009CEB59 /* Classes */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
-				FF78CA5E1ACB040D00E51991 /* ListaPecasVC.h */,
-				FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */,
 			);
 			path = Teatro;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 				FFB52B9E1AC48ACC00261776 /* FichaTecnica.m */,
 				FF95F0E41AC5A545000D296E /* JSON.h */,
 				FF95F0E51AC5A545000D296E /* JSON.m */,
+				DA34AE351ACB233C0070439A /* Destaques.h */,
+				DA34AE361ACB233C0070439A /* Destaques.m */,
 				FF592BA21AC9DA4B00398F30 /* listaTableViewCell.h */,
 				FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */,
 			);
@@ -252,6 +260,7 @@
 			files = (
 				85D7FADC1AC3073300FA6EB6 /* Main.storyboard in Resources */,
 				FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */,
+				DA34AE311ACB1D0D0070439A /* Destaques.txt in Resources */,
 				85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */,
 				FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */,
 			);
@@ -280,6 +289,7 @@
 				FF78CA601ACB040D00E51991 /* ListaPecasVC.m in Sources */,
 				85D7FAD31AC3073300FA6EB6 /* main.m in Sources */,
 				DAA2FA831AC339CB006E34EE /* HomeViewController.m in Sources */,
+				DA34AE371ACB233C0070439A /* Destaques.m in Sources */,
 				FF95F0E61AC5A545000D296E /* JSON.m in Sources */,
 				FF09B0721AC46676007E21A4 /* BackgroundLayer.m in Sources */,
 			);
