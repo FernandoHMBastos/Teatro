@@ -15,7 +15,7 @@
 {
     self = [super init];
     if (self) {
-        self.listaPecas = [[NSMutableArray alloc] init];
+        self.listaDestaques = [[NSMutableArray alloc] init];
         self.mutableSortedArray = [[NSMutableArray alloc] init];
         
     }
@@ -49,7 +49,7 @@
         }else{
             //aqui vc manipula seu array
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            self.listaPecas = [[NSMutableArray alloc] init];
+            self.listaDestaques = [[NSMutableArray alloc] init];
             
             for (NSDictionary *pecaDict in dict[@"Destaques"]) {
                 
@@ -71,7 +71,7 @@
                 [p setGeneroString:[pecaDict objectForKey:@ "Genero"] ];
                 [p setNomeImagem: [pecaDict objectForKey: @ "Imagem" ]];
                 
-                [self.listaPecas addObject:p];
+                [self.listaDestaques addObject:p];
                 
             }
             
@@ -79,11 +79,11 @@
             
             NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"TituloString" ascending:YES selector:@selector(caseInsensitiveCompare:)];
             
-            NSArray *sortedArray = [self.listaPecas sortedArrayUsingDescriptors:@[sort]];
+            NSArray *sortedArray = [self.listaDestaques sortedArrayUsingDescriptors:@[sort]];
             
             self.mutableSortedArray = [sortedArray copy];
             
-            self.listaPecas = self.mutableSortedArray;
+            self.listaDestaques = self.mutableSortedArray;
             
         }
     }

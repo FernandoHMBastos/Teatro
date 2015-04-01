@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 2
 
+// MMParallaxCell
+#define COCOAPODS_POD_AVAILABLE_MMParallaxCell
+#define COCOAPODS_VERSION_MAJOR_MMParallaxCell 1
+#define COCOAPODS_VERSION_MINOR_MMParallaxCell 0
+#define COCOAPODS_VERSION_PATCH_MMParallaxCell 0
+

@@ -12,7 +12,7 @@
 
 -(void) destaques;
 
-@property(nonatomic, strong) NSMutableArray *listaPecas;
+@property(nonatomic, strong) NSMutableArray *listaDestaques;
 @property(nonatomic, strong) NSMutableArray *mutableSortedArray;
 
 @end
