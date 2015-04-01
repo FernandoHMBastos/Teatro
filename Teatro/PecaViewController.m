@@ -84,13 +84,15 @@
     self.generoPecaLabel.text = self.peca.GeneroString;
     self.imagemPeca.image = [UIImage imageNamed: self.peca.NomeImagem];
     
+    FichaTecnica *ficha = [self.peca ficha];
+    
     ///Passa os valores da classe FichaTécnica para as labels
-    self.grupoLabel.text = self.peca.ficha.GrupoString;
-    self.direcaoLabel.text = self.peca.ficha.DirecaoString;
-    self.duracaoLabel.text = self.peca.ficha.DuracaoString;
-    self.sinopseLabel.text = self.peca.ficha.SinopseString;
-    self.elencoLabel.text = self.peca.ficha.ElencoString;
-    self.contatoLabel.text = self.peca.ficha.ContatoString;
+    self.grupoLabel.text = ficha.GrupoString;
+    self.direcaoLabel.text = ficha.DirecaoString;
+    self.duracaoLabel.text = ficha.DuracaoString;
+    self.sinopseLabel.text = ficha.SinopseString;
+    self.elencoLabel.text = ficha.ElencoString;
+    self.contatoLabel.text = ficha.ContatoString;
 }
 
 @end

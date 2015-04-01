@@ -14,6 +14,7 @@
 #import "BackgroundLayer.h"
 #import "JSON.h"
 #import "Destaques.h"
+#import "MMParallaxCell.h"
 
 @interface HomeViewController ()
 
@@ -30,7 +31,7 @@
     
     Destaques *lista = [[Destaques alloc] init];
     [lista destaques];
-    self.lista = lista.listaPecas;
+    self.lista = lista.listaDestaques;
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
     
@@ -62,35 +63,29 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [[self lista] count];
+    //return [[self lista] count];
+    return [self.lista count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"cell";
-    
-    //Cria uma cell com as características que a gente deu no listaTableViewCell com o Identifier que demos pra ela
-    listaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //Define o título, local, preço, imagem, classificação indicadiva, horário e data da peça de acordo com cada objeto da lista de peças
-    Peca *peca = self.lista[indexPath.row];
-    cell.titulo.text = peca.TituloString;
-    cell.local.text = peca.LocalString;
-    cell.preco.text = peca.PrecoString;
-    cell.imagem.image = [UIImage imageNamed: peca.NomeImagem];
-    cell.classificacaoIndicativa.image = [UIImage imageNamed: peca.FaixaEtariaString];
-    cell.data.text = peca.DataString;
-    cell.horario.text = peca.HorarioString;
-    
-    //Falta criar a váriavel que vai pegar o inteiro de indexPath
-    if (indexPath.row%2 == 0) {
-        cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(80/255.0)  blue:(90/255.0)  alpha:1.0];
+    static NSString* cellIdentifier = @"CellIdentifier";
+   
+    MMParallaxCell* cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[MMParallaxCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    else {
-        cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0];
-    }
+    Peca *peca = [self.lista objectAtIndex:indexPath.row];
+    
+    cell.parallaxImage.image = [UIImage imageNamed:peca.NomeImagem];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"DestaqueSegue" sender:nil];
 }
 
 
@@ -136,7 +131,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     //Pergunta se o segue chamado é o Detail (vai ser porque a gente falou pra ser no listaTableViewCell)
-    if ([segue.identifier isEqualToString:@"Destaques"]) {
+    if ([segue.identifier isEqualToString:@"DestaqueSegue"]) {
         
         //Cria uma váriavel indexPath que pega qual linha foi clicada, identificando o objeto escolhido.
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];

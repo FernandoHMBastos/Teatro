@@ -11,11 +11,11 @@
 @interface FichaTecnica : NSObject
 
 ///Strings que cada peça precisa ter acesso, referentes à ficha técnica
-@property (nonatomic, strong) NSString* SinopseString;
-@property (nonatomic, strong) NSString* GrupoString;
-@property (nonatomic, strong) NSString* DirecaoString;
-@property (nonatomic, strong) NSString* ElencoString;
-@property (nonatomic, strong) NSString* DuracaoString;
-@property (nonatomic, strong) NSString* ContatoString;
+@property (nonatomic, strong, readwrite) NSString* SinopseString;
+@property (nonatomic, strong, readwrite) NSString* GrupoString;
+@property (nonatomic, strong, readwrite) NSString* DirecaoString;
+@property (nonatomic, strong, readwrite) NSString* ElencoString;
+@property (nonatomic, strong, readwrite) NSString* DuracaoString;
+@property (nonatomic, strong, readwrite) NSString* ContatoString;
 
 @end
