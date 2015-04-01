@@ -85,7 +85,7 @@
     cell.horario.text = peca.HorarioString;
     cell.layer.borderWidth = 5.0f;
     cell.layer.borderColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0].CGColor;
-    cell.layer.
+    
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     /*if (indexPath.row%2 == 0) {
         cell.backgroundColor = [UIColor colorWithRed:(20/255.0)  green:(80/255.0)  blue:(190/255.0)  alpha:1.0];

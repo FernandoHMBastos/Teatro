@@ -419,7 +419,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="U3P-ct-rgn" kind="push" identifier="DestaqueSegue" id="VA6-lP-05a"/>
+                                            <segue destination="U3P-ct-rgn" kind="show" identifier="DestaqueSegue" id="VA6-lP-05a"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
