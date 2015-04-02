@@ -29,10 +29,10 @@
     [super viewWillAppear:animated];
     
     //Cria a bglayer e chama a confirguração setada no BackgrundLayer.h
-    CAGradientLayer *bgLayer = [BackgroundLayer greenGradient];
+   /* CAGradientLayer *bgLayer = [BackgroundLayer greenGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
-    
+    */
 }
 
 - (void)didReceiveMemoryWarning {

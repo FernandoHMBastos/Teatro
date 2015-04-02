@@ -98,7 +98,7 @@
     cell.data.text = peca.DataString;
     cell.horario.text = peca.HorarioString;
     cell.layer.borderWidth = 5.0f;
-    cell.layer.borderColor = [UIColor colorWithRed:(255/255.0)  green:(220/255.0)  blue:(65/255.0)  alpha:1.0].CGColor;
+    cell.layer.borderColor = [UIColor colorWithRed:(0/255.0)  green:(0/255.0)  blue:(0/255.0)  alpha:1.0].CGColor;
     
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     /*if (indexPath.row%2 == 0) {
@@ -249,6 +249,7 @@
             
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
+            newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self datePicker];
 
@@ -257,6 +258,7 @@
             
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
+            newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self datePicker];
             [self.tableView setFrame:newFrame];
@@ -269,6 +271,7 @@
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
+            newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
             [self Gratuito];
             
@@ -278,6 +281,7 @@
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
+            newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
             [self listaCompleta];
             
@@ -286,6 +290,7 @@
     }
     [self.tableView reloadData];
 }
+
 
 
 

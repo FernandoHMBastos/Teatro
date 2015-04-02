@@ -2,7 +2,7 @@
 
 "Peças": [
 {
-"Titulo" : "A Ida",
+"Titulo" : "Ida, A",
 "Grupo" : "Os que foram",
 "Direcao" : "Muitos",
 "Data" : "12-05-2015",
@@ -19,11 +19,11 @@
 "Imagem" : "Peca1.jpg"
 },
 {
-"Titulo" : "A Volta",
+"Titulo" : "Volta, A",
 "Grupo" : "Os que voltaram",
 "Direcao" : "Alguns",
 "Data" : "05-04-2015",
-"Horario" : "18:00",
+"Horario" : "18:00, 20:00",
 "Duracao" : "1:00",
 "Faixa Etaria" : "12.jpg",
 "Preco" : "Gratuito",
@@ -36,7 +36,7 @@
 "Imagem" : "Peca2.jpg"
 },
 {
-"Titulo" : "A Pequena Sereia",
+"Titulo" : "Pequena Sereia, A",
 "Grupo" : "Instrutores do BEPiD",
 "Direcao" : "Raquel",
 "Data" : "05-04-2015",
@@ -102,6 +102,57 @@
 "Endereco" : "Rua da Desistência",
 "Genero" : "Teatro Acomodado",
 "Imagem" : "Peca5.jpg"
+},
+{
+"Titulo" : "Através de um Espelho",
+"Grupo" : "Instrutores do BEPiD",
+"Direcao" : "Raquel",
+"Data" : "05/04",
+"Horario" : "08:00",
+"Duracao" : "2:00",
+"Faixa Etaria" : "18.jpg",
+"Preco" : "Gratuito",
+"Sinopse" : "Musical com dança baseada no filme A Pequena Sereia",
+"Elenco" : "Augusto, Reina, Guga e Sérgio",
+"Local" : "Instituto Eldorado",
+"Contato" : "bepid@bepid.com",
+"Endereco" : "Av. Alan Turing, 275",
+"Genero" : "Comédia",
+"Imagem" : "Destaque"
+},
+{
+"Titulo" : "Cats",
+"Grupo" : "Instrutores do BEPiD",
+"Direcao" : "Raquel",
+"Data" : "05/04",
+"Horario" : "08:00",
+"Duracao" : "2:00",
+"Faixa Etaria" : "18.jpg",
+"Preco" : "Gratuito",
+"Sinopse" : "Musical com dança baseada no filme A Pequena Sereia",
+"Elenco" : "Augusto, Reina, Guga e Sérgio",
+"Local" : "Instituto Eldorado",
+"Contato" : "bepid@bepid.org",
+"Endereco" : "Av. Alan Turing, 275",
+"Genero" : "Comédia",
+"Imagem" : "cats.jpg"
+},
+{
+"Titulo" : "Lion King",
+"Grupo" : "Instrutores do BEPiD",
+"Direcao" : "Raquel",
+"Data" : "05/04",
+"Horario" : "08:00",
+"Duracao" : "2:00",
+"Faixa Etaria" : "18.jpg",
+"Preco" : "Gratuito",
+"Sinopse" : "Musical com dança baseada no filme A Pequena Sereia",
+"Elenco" : "Augusto, Reina, Guga e Sérgio",
+"Local" : "Instituto Eldorado",
+"Contato" : "bepid@bepid.org",
+"Endereco" : "Av. Alan Turing, 275",
+"Genero" : "Comédia",
+"Imagem" : "lion.jpg"
 }
 ]
 }
