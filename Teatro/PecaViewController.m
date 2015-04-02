@@ -66,7 +66,7 @@
     
     //Chama o método que define as informações a serem mostradas, a partir do que o segue trouxe de informação da peça clicada
     [self chamarPeca:self.peca];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

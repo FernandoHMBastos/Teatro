@@ -10,6 +10,8 @@
 
 @interface ListaPecasVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pickerHeightEnabled;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pickerHeight;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
 @property (weak, nonatomic) IBOutlet UISwitch *buscaData;
 @property (weak, nonatomic) IBOutlet UISwitch *Gratuito;

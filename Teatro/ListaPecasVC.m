@@ -16,14 +16,13 @@
 @interface ListaPecasVC()
 
 @property(nonatomic, strong) NSMutableArray *lista;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property(nonatomic, strong) NSString *strDate;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property(nonatomic) int a;
 
 @end
 
 @implementation ListaPecasVC
-
-int a;
 
 - (void)listaCompleta {
     ///Chama a mutable array do json e passa os dados para a lista daqui
@@ -33,34 +32,53 @@ int a;
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.datePicker.hidden = YES;
     [self listaCompleta];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
+    self.datePicker.hidden = YES;
     
 }
 
-
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    a++;
+    [super viewWillAppear:animated];
     
-    if(a == 1){
-    CGRect newFrame = self.tableView.frame;
-    newFrame.origin.y = self.datePicker.frame.origin.y;
-    [self.tableView setFrame:newFrame];
+    
+    /*
+        CGRect newFrame = self.tableView.frame;
+    if (!self.buscaData.isOn)
+    {        newFrame.origin.y = 0;
+        NSLog(@"Pos %f", newFrame.origin.y);
+        
+        
+    } else {
+        newFrame.origin.y = self.datePicker.frame.origin.y + 200;
+        NSLog(@"Pos %f", newFrame.origin.y);
     }
     
+    [self.tableView setBounds:newFrame];
     
+     NSLog(@"Pos %f,%f --> %f,%f", newFrame.origin.x, newFrame.origin.y, newFrame.size.width, newFrame.size.height);
+    NSLog(@"Pos %f,%f --> %f,%f", self.tableView.frame.origin.x, self.tableView.frame.origin.y, self.tableView.frame.size.width, self.tableView.frame.size.height);
+    [self.view setNeedsLayout];
+        //newFrame.size.height += self.datePicker.frame.size.height;
+    */
+    
+    if (self.buscaData.isOn) {
+        self.pickerHeightEnabled.constant = 162;
+    } else {
+    self.pickerHeightEnabled.constant = 0;
+    }
+
+    [self.view setNeedsLayout];
 }
 
 
@@ -105,11 +123,11 @@ int a;
     
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     /*if (indexPath.row%2 == 0) {
-        cell.backgroundColor = [UIColor colorWithRed:(20/255.0)  green:(80/255.0)  blue:(190/255.0)  alpha:1.0];
-    }
-    else {
-        cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0];
-    }*/
+     cell.backgroundColor = [UIColor colorWithRed:(20/255.0)  green:(80/255.0)  blue:(190/255.0)  alpha:1.0];
+     }
+     else {
+     cell.backgroundColor = [UIColor colorWithRed:(60/255.0)  green:(100/255.0)  blue:(130/255.0)  alpha:1.0];
+     }*/
     
     return cell;
 }
@@ -172,7 +190,7 @@ int a;
 }
 
 - (IBAction)Gratuito:(UISwitch *)sender {
-
+    
     if ([sender isOn]) {
         
         if([self.buscaData isOn]){
@@ -185,9 +203,9 @@ int a;
             
         }else{
             
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
-             [self listaCompleta];
-        self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
+            [self listaCompleta];
+            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
         }
     } else {
         
@@ -207,12 +225,12 @@ int a;
 
 
 - (IBAction)datePicker:(id)sender {
-
+    
     UIDatePicker* datePicker = (UIDatePicker*)sender;
     NSDate *selectedDate = [datePicker date];
-
     
-  [self filterByDate:selectedDate];
+    
+    [self filterByDate:selectedDate];
     
 }
 
@@ -223,22 +241,22 @@ int a;
     self.strDate = [dateFormat stringFromDate:date];
     
     
-        if([self.Gratuito isOn]){
-            
-    [self listaCompleta];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
-    self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-    predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
-    self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            
-        }else{
-            
-           
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
-             [self listaCompleta];
-            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            
-        }
+    if([self.Gratuito isOn]){
+        
+        [self listaCompleta];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
+        self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+        predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
+        self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+        
+    }else{
+        
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
+        [self listaCompleta];
+        self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
+        
+    }
     
     [self.tableView reloadData];
     
@@ -248,48 +266,70 @@ int a;
     
     if([sender isOn]) {
         if([self.Gratuito isOn]){
-       
+            /*
             
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
-            newFrame.size.height -= self.datePicker.frame.size.height;
+            //newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
             [self datePicker];
-
+             */
+            
+            self.datePicker.hidden = NO;
+            self.pickerHeightEnabled.constant = 162;
+            
+            [self.view setNeedsLayout];
+            
         }else{
             
-            
+            /*
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
-            newFrame.size.height -= self.datePicker.frame.size.height;
+            //newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
             [self datePicker];
+            */
             
-
+            self.datePicker.hidden = NO;
+            self.pickerHeightEnabled.constant = 162;
+            
+            [self.view setNeedsLayout];
+            
         }
         
     }else{
         if([self.Gratuito isOn]){
         
+            /*
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
-            newFrame.size.height += self.datePicker.frame.size.height;
+            //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
             [self Gratuito];
+            */
             
+            self.datePicker.hidden = YES;
+            self.pickerHeightEnabled.constant = 0;
+            
+            [self.view setNeedsLayout];
             
         }else{
-
+            /*
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
-            newFrame.size.height += self.datePicker.frame.size.height;
+            //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
-            [self listaCompleta];
+            [self listaCom
+             pleta];
+             */
+            self.datePicker.hidden = YES;
+            self.pickerHeightEnabled.constant = 0;
             
+            [self.view setNeedsLayout];
         }
         
     }
