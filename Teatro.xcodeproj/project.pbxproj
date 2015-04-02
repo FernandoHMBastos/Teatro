@@ -21,12 +21,13 @@
 		DAA2FA8E1AC346E4006E34EE /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2FA8D1AC346E4006E34EE /* HelpViewController.m */; };
 		DAE844CB6FCE983DC64BB3C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 427BC70E4EC48443821099B9 /* libPods.a */; };
 		FF09B0721AC46676007E21A4 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF09B0711AC46676007E21A4 /* BackgroundLayer.m */; };
+		FF1346421ACDD6CE00DB3278 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1346411ACDD6CE00DB3278 /* background.jpg */; };
 		FF1C89FE1ACDD16D00BE5906 /* solosimp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */; };
 		FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */; };
 		FF592BA41AC9DA4B00398F30 /* listaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */; };
 		FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF592BA51ACAD5B200398F30 /* Images.xcassets */; };
 		FF78CA601ACB040D00E51991 /* ListaPecasVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */; };
-		FF8AEF8F1ACDB8F200342EBE /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF8AEF8E1ACDB8F200342EBE /* background.jpg */; };
+		FF957FC91ACDDB8C001774D2 /* lume.png in Resources */ = {isa = PBXBuildFile; fileRef = FF957FC81ACDDB8C001774D2 /* lume.png */; };
 		FF95F0E61AC5A545000D296E /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0E51AC5A545000D296E /* JSON.m */; };
 		FFB52B9F1AC48ACC00261776 /* FichaTecnica.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB52B9E1AC48ACC00261776 /* FichaTecnica.m */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		EBE3C05F2164FA47282E7B1A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FF09B0701AC46676007E21A4 /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
 		FF09B0711AC46676007E21A4 /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
+		FF1346411ACDD6CE00DB3278 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images.xcassets/background.jpg; sourceTree = "<group>"; };
 		FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = solosimp.jpg; path = Images.xcassets/solosimp.jpg; sourceTree = "<group>"; };
 		FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TesteTeatro.txt; sourceTree = "<group>"; };
 		FF592BA21AC9DA4B00398F30 /* listaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listaTableViewCell.h; sourceTree = "<group>"; };
@@ -76,7 +78,7 @@
 		FF592BA51ACAD5B200398F30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF78CA5E1ACB040D00E51991 /* ListaPecasVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaPecasVC.h; sourceTree = "<group>"; };
 		FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaPecasVC.m; sourceTree = "<group>"; };
-		FF8AEF8E1ACDB8F200342EBE /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images.xcassets/background.jpg; sourceTree = "<group>"; };
+		FF957FC81ACDDB8C001774D2 /* lume.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lume.png; path = Images.xcassets/lume.png; sourceTree = "<group>"; };
 		FF95F0E41AC5A545000D296E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		FF95F0E51AC5A545000D296E /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		FFB52B9D1AC48ACC00261776 /* FichaTecnica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaTecnica.h; sourceTree = "<group>"; };
@@ -158,8 +160,9 @@
 				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
 				DAA2FA851AC339E9006E34EE /* PecaViewController.m */,
 				FF592BA51ACAD5B200398F30 /* Images.xcassets */,
+				FF957FC81ACDDB8C001774D2 /* lume.png */,
 				FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */,
-				FF8AEF8E1ACDB8F200342EBE /* background.jpg */,
+				FF1346411ACDD6CE00DB3278 /* background.jpg */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				DA5532CA1AC46D11009CEB59 /* Classes */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
@@ -297,10 +300,11 @@
 			files = (
 				8591D5961ACC337E00601EDB /* basic cell.xib in Resources */,
 				FF1C89FE1ACDD16D00BE5906 /* solosimp.jpg in Resources */,
-				FF8AEF8F1ACDB8F200342EBE /* background.jpg in Resources */,
+				FF957FC91ACDDB8C001774D2 /* lume.png in Resources */,
 				FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */,
 				DA34AE311ACB1D0D0070439A /* Destaques.txt in Resources */,
 				DA3BBA081ACDABA10030230A /* Main.storyboard in Resources */,
+				FF1346421ACDD6CE00DB3278 /* background.jpg in Resources */,
 				85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */,
 				FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */,
 			);
