@@ -50,7 +50,9 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-       
+    
+    
+    /*
         CGRect newFrame = self.tableView.frame;
     if (!self.buscaData.isOn)
     {        newFrame.origin.y = 0;
@@ -68,8 +70,15 @@
     NSLog(@"Pos %f,%f --> %f,%f", self.tableView.frame.origin.x, self.tableView.frame.origin.y, self.tableView.frame.size.width, self.tableView.frame.size.height);
     [self.view setNeedsLayout];
         //newFrame.size.height += self.datePicker.frame.size.height;
+    */
     
-    
+    if (self.buscaData.isOn) {
+        self.pickerHeightEnabled.constant = 162;
+    } else {
+    self.pickerHeightEnabled.constant = 0;
+    }
+
+    [self.view setNeedsLayout];
 }
 
 
@@ -257,7 +266,7 @@
     
     if([sender isOn]) {
         if([self.Gratuito isOn]){
-            
+            /*
             
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
@@ -265,40 +274,62 @@
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
             [self datePicker];
+             */
+            
+            self.datePicker.hidden = NO;
+            self.pickerHeightEnabled.constant = 162;
+            
+            [self.view setNeedsLayout];
             
         }else{
             
-            
+            /*
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y += self.datePicker.frame.size.height;
             //newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
             [self datePicker];
+            */
             
+            self.datePicker.hidden = NO;
+            self.pickerHeightEnabled.constant = 162;
+            
+            [self.view setNeedsLayout];
             
         }
         
     }else{
         if([self.Gratuito isOn]){
         
+            /*
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
             //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
             [self Gratuito];
+            */
             
+            self.datePicker.hidden = YES;
+            self.pickerHeightEnabled.constant = 0;
+            
+            [self.view setNeedsLayout];
             
         }else{
-            
+            /*
             self.datePicker.hidden = YES;
             CGRect newFrame = self.tableView.frame;
             newFrame.origin.y -= self.datePicker.frame.size.height;
             //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
-            [self listaCompleta];
+            [self listaCom
+             pleta];
+             */
+            self.datePicker.hidden = YES;
+            self.pickerHeightEnabled.constant = 0;
             
+            [self.view setNeedsLayout];
         }
         
     }
