@@ -118,8 +118,19 @@
     cell.classificacaoIndicativa.image = [UIImage imageNamed: peca.FaixaEtariaString];
     cell.data.text = peca.DataString;
     cell.horario.text = peca.HorarioString;
-    cell.layer.borderWidth = 5.0f;
-    cell.layer.borderColor = [UIColor colorWithRed:(20/255.0)  green:(115/255.0)  blue:(215/255.0)  alpha:1.0].CGColor;
+    
+    if ([peca.ficha.PosicaoImagem isEqualToString:@"vertical"]) {
+        cell.imagem.hidden = NO;
+        cell.imagem2.hidden = YES;
+        cell.imagem.image = [UIImage imageNamed: peca.NomeImagem];
+    }
+    else if ([peca.ficha.PosicaoImagem isEqualToString:@"horizontal"]) {
+        cell.imagem.hidden = YES;
+        cell.imagem2.hidden = NO;
+        cell.imagem2.image = [UIImage imageNamed: peca.NomeImagem];
+    }
+    //cell.layer.borderWidth = 5.0f;
+    //cell.layer.borderColor = [UIColor colorWithRed:(20/255.0)  green:(115/255.0)  blue:(215/255.0)  alpha:1.0].CGColor;
     
     //Falta criar a váriavel que vai pegar o inteiro de indexPath
     /*if (indexPath.row%2 == 0) {
