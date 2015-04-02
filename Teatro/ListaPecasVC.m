@@ -216,7 +216,8 @@
             self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
             
         }else{
-            [self listaCompleta];}
+            [self listaCompleta];
+        }
     }
     
     [self.tableView reloadData];
@@ -273,13 +274,14 @@
             //newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
-            [self datePicker];
+            
              */
             
             self.datePicker.hidden = NO;
             self.pickerHeightEnabled.constant = 162;
             
             [self.view setNeedsLayout];
+            [self datePicker];
             
         }else{
             
@@ -289,13 +291,14 @@
             //newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
             [self.tableView setFrame:newFrame];
-            [self datePicker];
+            
             */
             
             self.datePicker.hidden = NO;
             self.pickerHeightEnabled.constant = 162;
             
             [self.view setNeedsLayout];
+            [self datePicker];
             
         }
         
@@ -308,13 +311,15 @@
             newFrame.origin.y -= self.datePicker.frame.size.height;
             //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
-            [self Gratuito];
             */
             
             self.datePicker.hidden = YES;
             self.pickerHeightEnabled.constant = 0;
             
             [self.view setNeedsLayout];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
+            [self listaCompleta];
+            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
             
         }else{
             /*
@@ -323,13 +328,13 @@
             newFrame.origin.y -= self.datePicker.frame.size.height;
             //newFrame.size.height += self.datePicker.frame.size.height;
             [self.tableView setFrame:newFrame];
-            [self listaCom
-             pleta];
+            
              */
             self.datePicker.hidden = YES;
             self.pickerHeightEnabled.constant = 0;
             
             [self.view setNeedsLayout];
+            [self listaCompleta];
         }
         
     }
