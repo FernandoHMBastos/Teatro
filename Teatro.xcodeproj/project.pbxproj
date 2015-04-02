@@ -23,6 +23,7 @@
 		FF09B0721AC46676007E21A4 /* BackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FF09B0711AC46676007E21A4 /* BackgroundLayer.m */; };
 		FF1346421ACDD6CE00DB3278 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1346411ACDD6CE00DB3278 /* background.jpg */; };
 		FF1C89FE1ACDD16D00BE5906 /* solosimp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */; };
+		FF1DCB601ACDDF25001F08D3 /* deste.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1DCB5F1ACDDF25001F08D3 /* deste.png */; };
 		FF36E2BC1AC5C8DA00B9D147 /* TesteTeatro.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */; };
 		FF592BA41AC9DA4B00398F30 /* listaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */; };
 		FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF592BA51ACAD5B200398F30 /* Images.xcassets */; };
@@ -72,6 +73,7 @@
 		FF09B0711AC46676007E21A4 /* BackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundLayer.m; sourceTree = "<group>"; };
 		FF1346411ACDD6CE00DB3278 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images.xcassets/background.jpg; sourceTree = "<group>"; };
 		FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = solosimp.jpg; path = Images.xcassets/solosimp.jpg; sourceTree = "<group>"; };
+		FF1DCB5F1ACDDF25001F08D3 /* deste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = deste.png; path = Images.xcassets/deste.png; sourceTree = "<group>"; };
 		FF36E2BB1AC5C8DA00B9D147 /* TesteTeatro.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TesteTeatro.txt; sourceTree = "<group>"; };
 		FF592BA21AC9DA4B00398F30 /* listaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listaTableViewCell.h; sourceTree = "<group>"; };
 		FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = listaTableViewCell.m; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
 				DAA2FA851AC339E9006E34EE /* PecaViewController.m */,
 				FF592BA51ACAD5B200398F30 /* Images.xcassets */,
+				FF1DCB5F1ACDDF25001F08D3 /* deste.png */,
 				FF957FC81ACDDB8C001774D2 /* lume.png */,
 				FF1C89FD1ACDD16D00BE5906 /* solosimp.jpg */,
 				FF1346411ACDD6CE00DB3278 /* background.jpg */,
@@ -303,6 +306,7 @@
 				FF957FC91ACDDB8C001774D2 /* lume.png in Resources */,
 				FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */,
 				DA34AE311ACB1D0D0070439A /* Destaques.txt in Resources */,
+				FF1DCB601ACDDF25001F08D3 /* deste.png in Resources */,
 				DA3BBA081ACDABA10030230A /* Main.storyboard in Resources */,
 				FF1346421ACDD6CE00DB3278 /* background.jpg in Resources */,
 				85D7FAE11AC3073300FA6EB6 /* LaunchScreen.xib in Resources */,

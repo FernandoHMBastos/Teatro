@@ -106,7 +106,7 @@
 "Contato" : "ciacorposanto@gmail.com",
 "Endereco" : "Rua Mário Siqueira, 829 - Botafogo",
 "Genero" : "Contemporâneo",
-"Imagem" : "destaque",
+"Imagem" : "deste.png",
 "Posição": "vertical"
 },
 {
