@@ -117,7 +117,7 @@
 "Horario" : "08:00",
 "Duracao" : "2:00",
 "Faixa Etaria" : "18.jpg",
-"Preco" : "Gratuito",
+"Preco" : "R$ 20,00",
 "Sinopse" : "Musical com dança baseada no filme A Pequena Sereia",
 "Elenco" : "Augusto, Reina, Guga e Sérgio",
 "Local" : "Instituto Eldorado",
