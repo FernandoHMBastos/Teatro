@@ -2,7 +2,7 @@
 
 "Destaques": [
 {
-"Titulo" : "A Pequena Sereia",
+"Titulo" : "Através de um Espelho",
 "Grupo" : "Instrutores do BEPiD",
 "Direcao" : "Raquel",
 "Data" : "05/04",
