@@ -16,7 +16,8 @@
 "Contato" : "bepid@bepid.com",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "Destaque"
+"Imagem" : "Destaque",
+"Posição": "vertical"
 },
 {
 "Titulo" : "A Pequena Sereia",
@@ -33,7 +34,8 @@
 "Contato" : "bepid@bepid.org",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "cats.jpg"
+"Imagem" : "cats.jpg",
+"Posição": "vertical"
 },
 {
 "Titulo" : "A Pequena Sereia",
@@ -50,7 +52,8 @@
 "Contato" : "bepid@bepid.org",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "lion.jpg"
+"Imagem" : "lion.jpg",
+"Posição": "vertical"
 }
 
 

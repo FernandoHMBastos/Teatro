@@ -18,6 +18,7 @@
 
 ///Labels da view de cada peça (as que tem "Peca"no nome são para não serem duplicadas, pois na view de lista de peças já existe o campo
 @property (weak, nonatomic) IBOutlet UIImageView *imagemPeca;
+@property (weak, nonatomic) IBOutlet UIImageView *imagemPeca2;
 @property (weak, nonatomic) IBOutlet UIImageView *classificacaoIndicativa;
 @property (weak, nonatomic) IBOutlet UILabel *tituloPecaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *grupoLabel;
@@ -32,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *contatoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *enderecoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *generoPecaLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 
 
@@ -45,9 +47,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.backgroundImage.image = [UIImage imageNamed:@"background.jpg"];
+    
     //Inicia a classe JSON e chama a função que carrega as peças do txt
     JSON *json = [[JSON alloc] init];
     [json json];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,7 +88,18 @@
     self.localPecaLabel.text = self.peca.LocalString;
     self.enderecoLabel.text = self.peca.EnderecoString;
     self.generoPecaLabel.text = self.peca.GeneroString;
-    self.imagemPeca.image = [UIImage imageNamed: self.peca.NomeImagem];
+    
+    if ([self.peca.ficha.PosicaoImagem isEqualToString:@"vertical"]) {
+        self.imagemPeca.hidden = NO;
+        self.imagemPeca2.hidden = YES;
+        self.imagemPeca.image = [UIImage imageNamed: self.peca.NomeImagem];
+    }
+    else if ([self.peca.ficha.PosicaoImagem isEqualToString:@"horizontal"]) {
+        self.imagemPeca.hidden = YES;
+        self.imagemPeca2.hidden = NO;
+        self.imagemPeca2.image = [UIImage imageNamed: self.peca.NomeImagem];
+    }
+    
     
     FichaTecnica *ficha = [self.peca ficha];
     

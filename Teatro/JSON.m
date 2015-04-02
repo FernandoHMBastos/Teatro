@@ -77,6 +77,7 @@
                 [p setEnderecoString:[pecaDict objectForKey:@ "Endereco"] ];
                 [p setGeneroString:[pecaDict objectForKey:@ "Genero"] ];
                 [p setNomeImagem: [pecaDict objectForKey: @ "Imagem" ]];
+                [[p ficha] setPosicaoImagem: [pecaDict objectForKey: @"Posição" ]];
                 
                 [self.listaPecas addObject:p];
                 

@@ -17,5 +17,7 @@
 @property (nonatomic, strong, readwrite) NSString* ElencoString;
 @property (nonatomic, strong, readwrite) NSString* DuracaoString;
 @property (nonatomic, strong, readwrite) NSString* ContatoString;
+@property (nonatomic, strong, readwrite) NSString* PosicaoImagem;
+
 
 @end
