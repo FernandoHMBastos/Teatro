@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QQ2-iZ-oyM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QQ2-iZ-oyM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -259,7 +259,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="XcB-FH-Ab5" firstAttribute="top" secondItem="phZ-DK-gES" secondAttribute="bottom" constant="-1" id="dIN-7f-1U6">
-                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="18"/>
                             </constraint>
                             <constraint firstItem="phZ-DK-gES" firstAttribute="top" secondItem="Dnv-GB-3BW" secondAttribute="bottom" constant="10" id="eFe-Xr-ryc"/>
                             <constraint firstItem="phZ-DK-gES" firstAttribute="leading" secondItem="ff5-sb-Oqs" secondAttribute="leadingMargin" id="hNF-0s-sBL"/>
