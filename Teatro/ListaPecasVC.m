@@ -23,6 +23,8 @@
 
 @implementation ListaPecasVC
 
+int a;
+
 - (void)listaCompleta {
     ///Chama a mutable array do json e passa os dados para a lista daqui
     JSON *lista = [[JSON alloc] init];
@@ -43,9 +45,6 @@
     [self listaCompleta];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-
-    
-
     
 }
 
@@ -53,11 +52,15 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    a++;
     
-    self.datePicker.hidden = YES;
+    if(a == 1){
     CGRect newFrame = self.tableView.frame;
     newFrame.origin.y = self.datePicker.frame.origin.y;
     [self.tableView setFrame:newFrame];
+    }
+    
+    
 }
 
 
@@ -251,6 +254,7 @@
             newFrame.origin.y += self.datePicker.frame.size.height;
             newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
+            [self.tableView setFrame:newFrame];
             [self datePicker];
 
         }else{
@@ -260,8 +264,9 @@
             newFrame.origin.y += self.datePicker.frame.size.height;
             newFrame.size.height -= self.datePicker.frame.size.height;
             self.datePicker.hidden = NO;
-            [self datePicker];
             [self.tableView setFrame:newFrame];
+            [self datePicker];
+            
 
         }
         
