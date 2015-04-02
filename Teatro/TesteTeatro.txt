@@ -16,24 +16,26 @@
 "Contato" : "vamoquevamo@gmail.com",
 "Endereco" : "Rua sem volta",
 "Genero" : "Teatro Nômade",
-"Imagem" : "Peca1.jpg"
+"Imagem" : "Peca1.jpg",
+"Posição": "horizontal"
 },
 {
-"Titulo" : "Volta, A",
-"Grupo" : "Os que voltaram",
-"Direcao" : "Alguns",
-"Data" : "05-04-2015",
-"Horario" : "18:00, 20:00",
-"Duracao" : "1:00",
-"Faixa Etaria" : "12.jpg",
-"Preco" : "Gratuito",
-"Sinopse" : "Não gostaram e voltaram",
-"Elenco" : "Os que voltarm",
-"Local" : "Outro Veículo",
-"Contato" : "vamovolta@gmail.com",
-"Endereco" : "Rua da Desistência",
-"Genero" : "Teatro Acomodado",
-"Imagem" : "Peca2.jpg"
+"Titulo" : "Solos Impossíveis",
+"Grupo" : "",
+"Direcao" : "Carolina Bianchi e Amanda Lyra",
+"Data" : "10-04-2015",
+"Horario" : "20:00",
+"Duracao" : "",
+"Faixa Etaria" : "livre.jpg",
+"Preco" : "R$17,00",
+"Sinopse" : "Espetáculo composto por dois solos, em “O Otimista”, o ator Tomás Decina traz para a cena a história de um navegador explorador, realizando a mais importante jornada de sua carreira, a chegada ao topo da Terra. Em “Tamara Karsaviana”, Carolina Bianchi representa uma bailarina russa, sem muito talento, que sonha em ser atriz. Entre duas histórias tão diferentes, surgem alguns pontos em comum, como o afeto pela fantasia e pelas pequenas aventuras, o falhanço, a paródia de existir e o desejo de reinventar-se a cada projeto através de novas estruturas e novas parcerias.",
+"Elenco" : "Carolina Bianchi e Tomás Decina",
+"Local" : "Sesc Campinas",
+"Contato" : "",
+"Endereco" : "Rua Dom José I, 270 - Bonfim, Campinas - SP",
+"Genero" : "Contemporâneo",
+"Imagem" : "solosimp.jpg",
+"Posição": "horizontal"
 },
 {
 "Titulo" : "Pequena Sereia, A",
@@ -50,7 +52,8 @@
 "Contato" : "bepid@bepid.com",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "Peca3.jpg"
+"Imagem" : "Peca3.jpg",
+"Posição": "horizontal"
 },
 {
 "Titulo" : "Algum",
@@ -67,7 +70,8 @@
 "Contato" : "vamovolta@gmail.com",
 "Endereco" : "Rua da Desistência",
 "Genero" : "Teatro Acomodado",
-"Imagem" : "Peca4.jpg"
+"Imagem" : "Peca4.jpg",
+"Posição": "vertical"
 },
 {
 "Titulo" : "Último Teste",
@@ -84,7 +88,8 @@
 "Contato" : "vamovolta@gmail.com",
 "Endereco" : "Rua da Desistência",
 "Genero" : "Teatro Acomodado",
-"Imagem" : "Peca5.jpg"
+"Imagem" : "Peca5.jpg",
+"Posição": "vertical"
 },
 {
 "Titulo" : "Último Teste",
@@ -101,7 +106,8 @@
 "Contato" : "vamovolta@gmail.com",
 "Endereco" : "Rua da Desistência",
 "Genero" : "Teatro Acomodado",
-"Imagem" : "Peca5.jpg"
+"Imagem" : "Peca5.jpg",
+"Posição": "vertical"
 },
 {
 "Titulo" : "Através de um Espelho",
@@ -118,7 +124,8 @@
 "Contato" : "bepid@bepid.com",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "Destaque"
+"Imagem" : "Destaque",
+"Posição": "vertical"
 },
 {
 "Titulo" : "Cats",
@@ -135,7 +142,8 @@
 "Contato" : "bepid@bepid.org",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "cats.jpg"
+"Imagem" : "cats.jpg",
+"Posição": "vertical"
 },
 {
 "Titulo" : "Lion King",
@@ -152,7 +160,8 @@
 "Contato" : "bepid@bepid.org",
 "Endereco" : "Av. Alan Turing, 275",
 "Genero" : "Comédia",
-"Imagem" : "lion.jpg"
+"Imagem" : "lion.jpg",
+"Posição": "vertical"
 }
 ]
 }

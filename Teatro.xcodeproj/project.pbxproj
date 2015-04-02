@@ -25,6 +25,7 @@
 		FF592BA41AC9DA4B00398F30 /* listaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF592BA31AC9DA4B00398F30 /* listaTableViewCell.m */; };
 		FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF592BA51ACAD5B200398F30 /* Images.xcassets */; };
 		FF78CA601ACB040D00E51991 /* ListaPecasVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */; };
+		FF8AEF8F1ACDB8F200342EBE /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF8AEF8E1ACDB8F200342EBE /* background.jpg */; };
 		FF95F0E61AC5A545000D296E /* JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = FF95F0E51AC5A545000D296E /* JSON.m */; };
 		FFB52B9F1AC48ACC00261776 /* FichaTecnica.m in Sources */ = {isa = PBXBuildFile; fileRef = FFB52B9E1AC48ACC00261776 /* FichaTecnica.m */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		FF592BA51ACAD5B200398F30 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FF78CA5E1ACB040D00E51991 /* ListaPecasVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaPecasVC.h; sourceTree = "<group>"; };
 		FF78CA5F1ACB040D00E51991 /* ListaPecasVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaPecasVC.m; sourceTree = "<group>"; };
+		FF8AEF8E1ACDB8F200342EBE /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Images.xcassets/background.jpg; sourceTree = "<group>"; };
 		FF95F0E41AC5A545000D296E /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
 		FF95F0E51AC5A545000D296E /* JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSON.m; sourceTree = "<group>"; };
 		FFB52B9D1AC48ACC00261776 /* FichaTecnica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FichaTecnica.h; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				DAA2FA841AC339E9006E34EE /* PecaViewController.h */,
 				DAA2FA851AC339E9006E34EE /* PecaViewController.m */,
 				FF592BA51ACAD5B200398F30 /* Images.xcassets */,
+				FF8AEF8E1ACDB8F200342EBE /* background.jpg */,
 				85D7FADF1AC3073300FA6EB6 /* LaunchScreen.xib */,
 				DA5532CA1AC46D11009CEB59 /* Classes */,
 				85D7FAD01AC3073300FA6EB6 /* Supporting Files */,
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8591D5961ACC337E00601EDB /* basic cell.xib in Resources */,
+				FF8AEF8F1ACDB8F200342EBE /* background.jpg in Resources */,
 				FF592BA61ACAD5B200398F30 /* Images.xcassets in Resources */,
 				DA34AE311ACB1D0D0070439A /* Destaques.txt in Resources */,
 				DA3BBA081ACDABA10030230A /* Main.storyboard in Resources */,
