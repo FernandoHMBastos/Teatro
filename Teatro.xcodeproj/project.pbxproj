@@ -268,11 +268,11 @@
 				TargetAttributes = {
 					85D7FACC1AC3073300FA6EB6 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = MERJVB67M9;
+						DevelopmentTeam = 2MSKV8WUR9;
 					};
 					85D7FAE51AC3073300FA6EB6 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = MERJVB67M9;
+						DevelopmentTeam = 2MSKV8WUR9;
 						TestTargetID = 85D7FACC1AC3073300FA6EB6;
 					};
 				};
