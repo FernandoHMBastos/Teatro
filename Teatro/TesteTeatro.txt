@@ -5,7 +5,7 @@
 "Titulo" : "Lume 30 anos",
 "Grupo" : "Vários",
 "Direcao" : "",
-"Data" : "12-04-2015",
+"Data" : "15-05-2015",
 "Horario" : "14:00",
 "Duracao" : "30:00",
 "Faixa Etaria" : "livre.jpg",
