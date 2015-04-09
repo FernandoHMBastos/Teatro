@@ -90,6 +90,11 @@
 
 #pragma mark - Table view data source
 
+///Tira as linahs de divisão das células quando a tableview está vazia
+-(UIView*) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    return [[UIView alloc] init];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     //#warning Potentially incomplete method implementation.
     // Return the number of sections.
