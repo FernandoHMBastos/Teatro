@@ -23,7 +23,7 @@
 "Titulo" : "Solos Impossíveis",
 "Grupo" : "",
 "Direcao" : "Carolina Bianchi e Amanda Lyra",
-"Data" : "10-04-2015",
+"Data" : "08-04-2015",
 "Horario" : "20:00",
 "Duracao" : "",
 "Faixa Etaria" : "livre.jpg",
