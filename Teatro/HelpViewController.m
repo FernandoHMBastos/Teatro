@@ -12,6 +12,7 @@
 
 @interface HelpViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *mailButton;
 
 
 @end
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self springButton];
+    
 
 }
 
@@ -48,5 +51,22 @@
     NSURL *url = [NSURL URLWithString:@"mailto:email@email.com"];
     [[UIApplication sharedApplication] openURL:url];
 }
+
+-(void)springButton{
+
+    self.mailButton.transform = CGAffineTransformMakeScale(1.0, 1.0);
+
+    [UIView animateWithDuration:2 delay:0 options: UIViewAnimationOptionAutoreverse | UIViewAnimationOptionRepeat | UIViewAnimationOptionBeginFromCurrentState animations:^{
+        self.mailButton.transform = CGAffineTransformMakeScale(0.7, 0.7);
+    } completion:^(BOOL finished){[self springButton];}];
+      
+}
+
+-(void)loop{
+
+   
+    
+}
+
 
 @end

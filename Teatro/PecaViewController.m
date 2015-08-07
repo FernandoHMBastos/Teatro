@@ -35,7 +35,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *generoPecaLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *quando;
 
+@property (weak, nonatomic) IBOutlet UIImageView *infoBack;
 
 @end
 
@@ -47,7 +49,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage.image = [UIImage imageNamed:@"background.jpg"];
+    [self.tituloPecaLabel sizeToFit];
+    [self.data sizeToFit];
+    [self.horarioPecaLabel sizeToFit];
+    [self.localPecaLabel sizeToFit];
+    [self.sinopseLabel sizeToFit];
     
     //Inicia a classe JSON e chama a função que carrega as peças do txt
     JSON *json = [[JSON alloc] init];
@@ -63,6 +69,15 @@
     CAGradientLayer *bgLayer = [BackgroundLayer blueGradient];
     bgLayer.frame = self.view.bounds;
     [self.view.layer insertSublayer:bgLayer atIndex:0];
+    
+    [self.quando sizeToFit];
+    [self.tituloPecaLabel sizeToFit];
+    [self.data sizeToFit];
+    [self.horarioPecaLabel sizeToFit];
+    [self.localPecaLabel sizeToFit];
+    [self.sinopseLabel sizeToFit];
+
+    
     
     //Chama o método que define as informações a serem mostradas, a partir do que o segue trouxe de informação da peça clicada
     [self chamarPeca:self.peca];

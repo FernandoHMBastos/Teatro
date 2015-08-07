@@ -43,7 +43,12 @@
     [self listaCompleta];
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
-    self.datePicker.hidden = YES;
+    //self.tableView.backgroundView = nil;
+    self.tableView.contentSize = CGSizeMake(self.tableView.frame.size.width, self.tableView.contentSize.height);
+
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    //self.tableView.backgroundColor = [UIColor blackColor];
     
 }
 
@@ -51,16 +56,19 @@
 {
     [super viewWillAppear:animated];
     
-    
     /*
-        CGRect newFrame = self.tableView.frame;
-    if (!self.buscaData.isOn)
+    CGRect newFrame = self.tableView.frame;
+    newFrame.origin.y = self.tableView.frame.origin.y +80;
+    [self.tableView setBounds: self.tableView.frame];
+    [self.view setNeedsLayout];*/
+    
+    /*if (!self.buscaData.isOn)
     {        newFrame.origin.y = 0;
         NSLog(@"Pos %f", newFrame.origin.y);
         
         
     } else {
-        newFrame.origin.y = self.datePicker.frame.origin.y + 200;
+        newFrame.origin.y = self.datePicker.frame.origin.y + 80;
         NSLog(@"Pos %f", newFrame.origin.y);
     }
     
@@ -72,13 +80,14 @@
         //newFrame.size.height += self.datePicker.frame.size.height;
     */
     
-    if (self.buscaData.isOn) {
+    /*if (self.buscaData.isOn) {
         self.pickerHeightEnabled.constant = 162;
     } else {
     self.pickerHeightEnabled.constant = 0;
-    }
-
-    [self.view setNeedsLayout];
+    }*/
+    
+    //self.pickerHeightEnabled.constant = 0;
+    //[self.view setNeedsLayout];
 }
 
 
@@ -93,6 +102,10 @@
 ///Tira as linahs de divisão das células quando a tableview está vazia
 -(UIView*) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     return [[UIView alloc] init];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -205,42 +218,26 @@
     }
 }
 
+
 - (IBAction)Gratuito:(UISwitch *)sender {
     
     if ([sender isOn]) {
-        
-        if([self.buscaData isOn]){
-            
-            [self listaCompleta];
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
-            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
-            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            
-        }else{
             
             NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
             [self listaCompleta];
             self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
         }
-    } else {
+    else {
         
-        if([self.buscaData isOn]){
-            
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.DataString == %@", self.strDate];
-            [self listaCompleta];
-            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            
-        }else{
             [self listaCompleta];
         }
-    }
+    
     
     [self.tableView reloadData];
     
 }
 
-
+/*
 - (IBAction)datePicker:(id)sender {
     
     UIDatePicker* datePicker = (UIDatePicker*)sender;
@@ -277,85 +274,8 @@
     
     [self.tableView reloadData];
     
-}
+}*/
 
-- (IBAction)buscaData:(UISwitch *)sender {
-    
-    if([sender isOn]) {
-        if([self.Gratuito isOn]){
-            /*
-            
-            CGRect newFrame = self.tableView.frame;
-            newFrame.origin.y += self.datePicker.frame.size.height;
-            //newFrame.size.height -= self.datePicker.frame.size.height;
-            self.datePicker.hidden = NO;
-            [self.tableView setFrame:newFrame];
-            
-             */
-            
-            self.datePicker.hidden = NO;
-            self.pickerHeightEnabled.constant = 162;
-            
-            [self.view setNeedsLayout];
-            [self datePicker];
-            
-        }else{
-            
-            /*
-            CGRect newFrame = self.tableView.frame;
-            newFrame.origin.y += self.datePicker.frame.size.height;
-            //newFrame.size.height -= self.datePicker.frame.size.height;
-            self.datePicker.hidden = NO;
-            [self.tableView setFrame:newFrame];
-            
-            */
-            
-            self.datePicker.hidden = NO;
-            self.pickerHeightEnabled.constant = 162;
-            
-            [self.view setNeedsLayout];
-            [self datePicker];
-            
-        }
-        
-    }else{
-        if([self.Gratuito isOn]){
-        
-            /*
-            self.datePicker.hidden = YES;
-            CGRect newFrame = self.tableView.frame;
-            newFrame.origin.y -= self.datePicker.frame.size.height;
-            //newFrame.size.height += self.datePicker.frame.size.height;
-            [self.tableView setFrame:newFrame];
-            */
-            
-            self.datePicker.hidden = YES;
-            self.pickerHeightEnabled.constant = 0;
-            
-            [self.view setNeedsLayout];
-            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.PrecoString == %@", @"Gratuito"];
-            [self listaCompleta];
-            self.lista = [[NSMutableArray alloc] initWithArray:[self.lista filteredArrayUsingPredicate:predicate]];
-            
-        }else{
-            /*
-            self.datePicker.hidden = YES;
-            CGRect newFrame = self.tableView.frame;
-            newFrame.origin.y -= self.datePicker.frame.size.height;
-            //newFrame.size.height += self.datePicker.frame.size.height;
-            [self.tableView setFrame:newFrame];
-            
-             */
-            self.datePicker.hidden = YES;
-            self.pickerHeightEnabled.constant = 0;
-            
-            [self.view setNeedsLayout];
-            [self listaCompleta];
-        }
-        
-    }
-    [self.tableView reloadData];
-}
 
 
 

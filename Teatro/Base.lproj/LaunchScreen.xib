@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -10,19 +11,35 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1428004529_theatre-128-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jvx-Xl-HXC">
-                    <rect key="frame" x="120" y="176" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ZdB-VV-u5W">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="theatre" translatesAutoresizingMaskIntoConstraints="NO" id="Jvx-Xl-HXC">
+                    <rect key="frame" x="180" y="200" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="iIl-SV-Xuq"/>
+                        <constraint firstAttribute="width" secondItem="Jvx-Xl-HXC" secondAttribute="height" multiplier="15:8" id="pLQ-To-bMz"/>
+                    </constraints>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="69" y="155" width="240" height="128"/>
+                        <rect key="frame" x="80" y="149" width="240" height="128"/>
                     </variation>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.2925760691" alpha="0.81000000000000005" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="Jvx-Xl-HXC" secondAttribute="centerX" id="43j-Z8-mlt"/>
+                <constraint firstItem="ZdB-VV-u5W" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fgs-bm-ybO"/>
+                <constraint firstAttribute="trailing" secondItem="ZdB-VV-u5W" secondAttribute="trailing" id="bPB-X7-w5Q"/>
+                <constraint firstAttribute="bottom" secondItem="ZdB-VV-u5W" secondAttribute="bottom" id="g5q-DV-2rj"/>
+                <constraint firstItem="ZdB-VV-u5W" firstAttribute="centerY" secondItem="Jvx-Xl-HXC" secondAttribute="centerY" constant="36" id="kJF-hQ-bre"/>
+                <constraint firstItem="ZdB-VV-u5W" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oHW-l1-hVM"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
     <resources>
-        <image name="1428004529_theatre-128-1" width="128" height="128"/>
+        <image name="background" width="1200" height="1920"/>
+        <image name="theatre" width="512" height="512"/>
     </resources>
 </document>
